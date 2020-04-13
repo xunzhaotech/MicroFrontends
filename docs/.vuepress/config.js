@@ -1,13 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2020-04-09 19:48:12
- * @LastEditTime: 2020-04-09 20:39:07
+ * @LastEditTime: 2020-04-09 21:11:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
  */
 const resolve = dir => require('path').join(__dirname, dir)
-const nav = require('./nav')
+const  nav = require('./themeConfig/nav')         // 引入导航栏
+const  sidebar =require('./themeConfig/sidebar')  // 引入侧边栏
 
 const sortFn = key => (a, b) => {
   // README排在第一位 其他按照首字母顺序排列
@@ -32,23 +33,23 @@ module.exports = {
   dest: 'vuepress',    // 设置打包路径
   lastUpdated: 'Last Updated',    // 显示更新时间
   serviceWorker: true,
-  themeConfig:{
-    logo:"/icon.png",   // 导航栏左边logo,不写就不显示
-    sidebarDepth: 2, // 侧边栏显示2级
-    nav:[   // 导航栏配置
-        { text: 'vue', link: '/' },
-        { text: 'css', link: '/blog/' },
-        { 
-            text: 'js',  // 这里是下拉列表展现形式。 items可以一直嵌套下去
-            items:[
-                text:"ES5", link:"/js/es5/",
-                text:"ES6", link:"/js/es6/",
-            ]
-        },
-        {text: 'github', link:"https://github.com/1046224544"}
-    ],
+  // themeConfig:{
+  //   logo:"/icon.png",   // 导航栏左边logo,不写就不显示
+  //   sidebarDepth: 2, // 侧边栏显示2级
+  //   nav:[   // 导航栏配置
+  //       { text: 'vue', link: '/' },
+  //       { text: 'css', link: '/blog/' },
+  //       { 
+  //           text: 'js',  // 这里是下拉列表展现形式。 items可以一直嵌套下去
+  //           items:[
+  //               text:"ES5", link:"/js/es5/",
+  //               text:"ES6", link:"/js/es6/",
+  //           ]
+  //       },
+  //       {text: 'github', link:"https://github.com/1046224544"}
+  //   ],
     // 为以下路由添加侧边栏
-    sidebar: ['/', '/git', '/vue']
+    // sidebar: ['/', '/git', '/vue']
     // 嵌套侧边栏  以对象的方式嵌套下去
     // sidebar: {
     //     '/2019/': [
@@ -74,15 +75,13 @@ module.exports = {
     //     ],
     //     ...
     // }
-  },
-  // 主题配置
-  // themeConfig: {
-  //   // 顶部导航栏配置
-  //   nav,
-  //   sidebar: {
-  //     // '/components/': ['', 'TablePage', 'SearchBar', 'NavMenu', 'FilterTree', 'DialogBox']
-  //   }
   // },
+  // 主题配置
+  themeConfig: {
+    // 顶部导航栏配置
+    nav,   // 引入导航栏
+    sidebar  // 引入侧边栏
+  },
   plugins: {
     'vuepress-plugin-auto-sidebar': {
       sort: sortFn,
