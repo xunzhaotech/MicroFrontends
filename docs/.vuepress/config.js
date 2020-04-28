@@ -29,7 +29,7 @@ module.exports = {
   markdown: {
     lineNumbers: true,  // 代码显示行号
   }, 
-  base: '/',
+  base: '/MicroFrontends/',
   dest: 'vuepress',    // 设置打包路径
   lastUpdated: 'Last Updated',    // 显示更新时间
   serviceWorker: true,
