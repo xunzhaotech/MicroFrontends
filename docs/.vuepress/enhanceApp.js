@@ -1,13 +1,21 @@
 /*
  * @Author: your name
  * @Date: 2020-04-09 19:48:12
- * @LastEditTime: 2020-04-13 17:56:54
- * @LastEditors: your name
+ * @LastEditTime: 2020-05-03 22:02:32
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\enhanceApp.js
  */
-// import Element from 'element-ui'
-// import 'element-ui/lib/theme-chalk/index.css'
+import Vue from 'vue'
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+export default ({
+  Vue,
+  options,
+  router
+}) => {
+  Vue.use(Element)
+}
 // export default ({
 //   Vue, // the version of Vue being used in the VuePress app
 //   options, // the options for the root Vue instance

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy": "gh-pages -d dist",
+    "deploy:build": "npm run docs:build && gh-pages -d dist"
   },
   "description": "前端微服务",
   "main": "index.js",
@@ -11,6 +13,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "vuepress": "^1.4.0"
+    "gh-pages": "^2.2.0",
+    "vuepress": "^1.4.1"
   }
 }

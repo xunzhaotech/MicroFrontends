@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-09 19:48:12
- * @LastEditTime: 2020-04-09 21:11:18
+ * @LastEditTime: 2020-05-03 22:06:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -17,21 +17,22 @@ const sortFn = key => (a, b) => {
 }
 
 module.exports = {
-  title: '前端微服务',
-  description: '讯曌科技前端微服务',// 描述 
-  keywords:"讯曌科技前端微服务博客",  // 关键字
-  head:[   // 配置头部
+  title: '前端微服务',                                         // 设置网站标题
+  description: '讯曌科技前端微服务',                            // 描述 
+  keywords:"讯曌科技前端微服务博客",                            // 关键字
+  repo: 'https://github.com/xunzhaotech/MicroFrontends.git',  // 添加 github 链接
+  head:[                                                      // 配置头部
     [
         ['link', {rel:'icon', href:"/icon.png"}],
         ['meta', {'name':'viewport', content:"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;"}]
     ]
   ],
   markdown: {
-    lineNumbers: true,  // 代码显示行号
+    lineNumbers: true,              // 代码显示行号
   }, 
-  base: '/MicroFrontends/',
-  dest: 'vuepress',    // 设置打包路径
-  lastUpdated: 'Last Updated',    // 显示更新时间
+  base: '/MicroFrontends/',         // 设置站点根路径
+  dest: '.vuepress/dist',                   // 设置输出目录
+  lastUpdated: 'Last Updated',      // 显示更新时间
   serviceWorker: true,
   // themeConfig:{
   //   logo:"/icon.png",   // 导航栏左边logo,不写就不显示
@@ -80,7 +81,8 @@ module.exports = {
   themeConfig: {
     // 顶部导航栏配置
     nav,   // 引入导航栏
-    sidebar  // 引入侧边栏
+    sidebar: auto
+    // sidebar  // 引入侧边栏
   },
   plugins: {
     'vuepress-plugin-auto-sidebar': {
