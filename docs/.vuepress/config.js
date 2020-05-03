@@ -1,5 +1,13 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-03 21:39:48
+ * @LastEditTime: 2020-05-03 23:05:26
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \MicroFrontends\docs\.vuepress\config.js
+ */
 module.exports = {
-  base: '/mt-blog/',
+  base: '/MicroFrontends/',
   dest: './dist',
   title: 'Hello MT-BLOG',
   description: '12345，上山打老虎。',
