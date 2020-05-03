@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-09 19:48:12
- * @LastEditTime: 2020-05-03 22:06:51
+ * @LastEditTime: 2020-05-03 22:34:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -81,7 +81,7 @@ module.exports = {
   themeConfig: {
     // 顶部导航栏配置
     nav,   // 引入导航栏
-    sidebar: auto
+    sidebar: 'auto'
     // sidebar  // 引入侧边栏
   },
   plugins: {
