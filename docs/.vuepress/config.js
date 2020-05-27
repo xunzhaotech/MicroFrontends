@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-05-03 23:05:26
- * @LastEditors: your name
+ * @LastEditTime: 2020-05-27 13:30:27
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
  */
