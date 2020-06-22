@@ -1,16 +1,17 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-05-03 23:05:26
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-22 13:44:57
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
  */
 module.exports = {
   base: '/MicroFrontends/',
-  dest: './dist',
+  dest: '.vuepress/dist',
   title: 'Hello MT-BLOG',
   description: '12345，上山打老虎。',
+  theme: 'antdocs',
   themeConfig: {
     repo: 'TaoXuSheng/mt-blog',
     nav: [
