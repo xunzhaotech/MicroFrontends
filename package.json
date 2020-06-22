@@ -13,11 +13,11 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@babel/runtime": "^7.0.0-beta.46",
+    "@babel/runtime": "7.0.0-beta.46",
     "element-ui": "^2.13.1",
     "gh-pages": "^2.2.0",
     "html2canvas": "^1.0.0-rc.5",
     "sass-loader": "^8.0.2",
-    "vuepress": "^1.4.1"
+    "vuepress": "^1.5.2"
   }
 }
