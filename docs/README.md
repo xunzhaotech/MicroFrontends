@@ -2,6 +2,7 @@
 home: true
 lang: en-US
 heroImage: /favicon.png
+bannerBg:  /favicon.png
 heroText: 微服务
 tagline: 公众号前端微服务
 actionText: 快速上手 →
