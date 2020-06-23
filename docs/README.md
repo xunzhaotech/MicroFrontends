@@ -20,10 +20,10 @@ features:
   details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
   link: /guide/
   imgUrl: /favicon.png
-footer: MIT Licensed | Copyright © 2018-present Evan You
+# footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
-::: slot base
+<!-- ::: slot base
 1212121
 :::
 ::: slot header
@@ -35,5 +35,5 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 
 ::: slot footer
 Here's some contact info
-:::
+::: -->
 
