@@ -2,7 +2,7 @@
   <div>
     <main class="home" aria-labelledby="main-title">
       <header class="hero">
-        <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" class="hero-logo"/>
+        <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || '微服务'" class="hero-logo"/>
 
         <h1 v-if="data.heroText !== null" id="main-title">
           {{ data.heroText || $title || 'Hello' }}
