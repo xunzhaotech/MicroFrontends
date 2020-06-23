@@ -1,51 +1,48 @@
 /*
  * @Author: your name
- * @Date: 2020-04-09 20:49:45
- * @LastEditTime: 2020-04-09 20:52:00
- * @LastEditors: your name
+ * @Date: 2020-05-26 17:13:56
+ * @LastEditTime: 2020-06-15 17:40:48
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: \MicroFrontends\docs\.vuepress\themeConfig\nav.js
- */
-module.exports = [
-    {text:"首页", link:"/"},
+ * @FilePath: \vuepress-admin\docs\.vuepress\themeConfig\nav.js
+ */ 
+module.exports = [                                      
     {
-        text:"技术API",
-        ariLabel:"技术API",
-        items:[
-            {text:"koa", link:"/api/learn/koa/"},
-            {text:"vue", link:"/api/learn/vue/"},
-            {text:"es6", link:"/api/learn/es6/"},
-            {text:"java", link:"/api/learn/java/"},
-            {text:"express", link:"/api/learn/express/"},
-        ]
+      text: '首页',
+      ariLabel:"其他小站", 
+      link: '/'
     },
-    {
-        text:"日常博客",
-        ariLabel:"日常博客",
-        items:[
-            {text:"前端",link:"/api/front/"},
-            {text:"后端",link:"/api/end/"},
-            {text:"其他",link:"/api/orther/1.md"},
-        ]
-    },
-    {text:"关于博客", link:"/api/builog/"},
-    {text:"关于作者", link:"/api/author/"},
-    {
-        text:"其他小站",
-        ariLabel:"其他小站", 
-        items:[
-            {text:"掘金", link:'https://juejin.im/user/5d1079ab6fb9a07ed4410cc0'},
-            {text:"SegmentFault", link:'https://segmentfault.com/u/98kk'},
-            {text:"CSDN", link:'https://blog.csdn.net/weixin_43374176'},
-        ]
-    },
-    {
-        text:"联系",
-        ariLabel:"联系",
-        items:[
-            {text:"邮箱", link:"mailto:wsm_1105@163.com", target:"_blank"},
-            {text:"其他", link:"/api/contact/"}
-        ]
-    },
-    {text:"GitHub", link:"http://github.com/1046224544"}
-]
+    // {
+    //   text: '规范',
+    //   ariLabel:"其他小站", 
+    //   link: '/config.html'
+    // },
+    // {
+    //   text: '模板下载',
+    //   ariLabel:"其他小站", 
+    //   link: '#',
+    //   items: [                                 // 这里是下拉列表展现形式。 items可以一直嵌套下去
+    //     {
+    //       text: 'Nuxt-Admin模板',
+    //       ariLabel:"其他小站", 
+    //       link: '/templates/NUXTADMIN'
+    //     },
+    //     {
+    //       text: 'uniapp-Admin模板',
+    //       link: '/templates/UNIAPPADMIN'
+    //     }
+    //   ]
+    // },
+  //   {
+  //     text: 'language',
+  //     items: [
+  //       {text: 'Group1', items: [/* */]},
+  //       {text: 'Group1', items: [/* */]}
+  //     ]
+  //   }
+  ]
+  // sidebar: [                                       // 为以下路由添加侧边栏
+  //   ['/', 'Start'], 
+  //   ['/cli/', '第一个板块'],
+  //   ['/guide/', '第二个版块'],
+  // ],
