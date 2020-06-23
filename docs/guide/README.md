@@ -1,4 +1,17 @@
 
+::: slot base
+1212121
+:::
+::: slot header
+# Here might be a page title
+:::
+
+- A Paragraph
+- Another Paragraph
+
+::: slot footer
+Here's some contact info
+:::
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/xunzhaotech/MicroFrontends/edit/master/docs/README.md) to maintain and preview the content for your website in Markdown files.
