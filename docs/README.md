@@ -23,4 +23,17 @@ features:
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
 
+::: slot base
+1212121
+:::
+::: slot header
+# Here might be a page title
+:::
+
+- A Paragraph
+- Another Paragraph
+
+::: slot footer
+Here's some contact info
+:::
 
