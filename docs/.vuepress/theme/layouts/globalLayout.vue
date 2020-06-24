@@ -50,12 +50,12 @@ export default {
 </script>
 <style lang="less" scoped>
  #global-layout {
-    // background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #1b2947);
-    // background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
-    // background-attachment: scroll;
-    // overflow-x: hidden;
-    // overflow-y: auto;
-    // height: 100vh;
+    background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #1b2947);
+    background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
+    background-attachment: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
     .stars {
       transform: perspective(500px);
       transform-style: preserve-3d;
