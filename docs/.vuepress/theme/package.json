@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-loving",
   "title": "AntDocs of VuePress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An Ant Design style theme for VuePress.",
   "main": "index.js",
   "keywords": [

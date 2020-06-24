@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-06-24 00:27:30
+ * @LastEditTime: 2020-06-24 14:24:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
@@ -53,7 +53,7 @@ export default {
     background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #1b2947);
     background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
     background-attachment: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   @keyframes rotate {
     0% {

@@ -10,9 +10,9 @@
     :class="pageClasses"
   >
     <!-- 主题头部, shouldShowNavbar判断是否显示头部-->
-    <!-- <Navbar
+    <Navbar
       v-if="shouldShowNavbar"
-    /> -->
+    />
     <!-- 字移动端点击内容部分目录会隐藏 -->
     <div
       class="sidebar-mask"
