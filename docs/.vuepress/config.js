@@ -13,6 +13,6 @@ module.exports = {
   dest: '.vuepress/dist',
   title: '微服务',
   description: '一个有自由创作灵感的平台！',
-  theme: 'antdocs',
+  theme: 'loving',
   themeConfig
 }

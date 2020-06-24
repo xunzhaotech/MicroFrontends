@@ -6,3 +6,6 @@
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config\index.js
  */ 
+module.exports = {
+    
+}
