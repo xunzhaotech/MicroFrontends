@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-loving",
-  "title": "AntDocs of VuePress",
+  "title": "xunzhaotech of VuePress",
   "version": "0.0.1",
   "description": "An Ant Design style theme for VuePress.",
   "main": "index.js",
@@ -8,19 +8,20 @@
     "theme",
     "vuepress",
     "vuepress-theme",
+    "vuepress-loving",
     "antd",
     "antdocs",
     "ant-design"
   ],
-  "author": "Feng L.H.",
+  "author": "xunzhaotech",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zpfz/vuepress-theme-antdocs.git"
+    "url": "git+https://github.com/xunzhaotech/vuepress-theme-loving.git"
   },
   "bugs": {
-    "url": "https://github.com/zpfz/vuepress-theme-antdocs/issues"
+    "url": "https://github.com/xunzhaotech/vuepress-theme-loving/issues"
   },
-  "homepage": "http://antdocs.seeyoz.cn",
+  "homepage": "http://xunzhaotech.com",
   "license": "MIT",
   "dependencies": {
     "@vuepress/plugin-active-header-links": "^1.5.0",
