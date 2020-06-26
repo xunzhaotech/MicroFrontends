@@ -5,6 +5,6 @@ export default {
   "NotFound": () => import("E:\\xz-template\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\404.vue"),
   "AnotherLayout": () => import("E:\\xz-template\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\AnotherLayout.vue"),
   "BaseLayout": () => import("E:\\xz-template\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\BaseLayout.vue"),
-  "globalLayout": () => import("E:\\xz-template\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\globalLayout.vue"),
+  "globalLayout1": () => import("E:\\xz-template\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\globalLayout1.vue"),
   "Layout": () => import("E:\\xz-template\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\Layout.vue") 
 }

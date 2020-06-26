@@ -23,46 +23,6 @@ export const siteData = {
   ],
   "pages": [
     {
-      "title": "Home",
-      "frontmatter": {
-        "home": true,
-        "lang": "en-US",
-        "heroImage": "/favicon.png",
-        "bannerBg": "/favicon.png",
-        "heroText": "微服务",
-        "tagline": "公众号前端微服务",
-        "actionText": "快速上手 →",
-        "actionLink": "/guide/",
-        "navbar": false,
-        "sidebar": false,
-        "features": [
-          {
-            "title": "简洁至上",
-            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。",
-            "link": "/guide/",
-            "imgUrl": "/favicon.ico"
-          },
-          {
-            "title": "Vue驱动",
-            "details": "享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。",
-            "link": "/guide/",
-            "imgUrl": "/favicon.ico"
-          },
-          {
-            "title": "高性能",
-            "details": "VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。",
-            "link": "/guide/",
-            "imgUrl": "/favicon.ico"
-          }
-        ]
-      },
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-e557697c",
-      "path": "/",
-      "lastUpdated": "6/24/2020, 4:50:31 PM"
-    },
-    {
       "frontmatter": {},
       "regularPath": "/config.html",
       "relativePath": "config.md",
@@ -99,6 +59,16 @@ export const siteData = {
         }
       ],
       "lastUpdated": "6/23/2020, 6:25:20 PM"
+    },
+    {
+      "frontmatter": {
+        "navbar": false
+      },
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-e557697c",
+      "path": "/",
+      "lastUpdated": "6/26/2020, 6:21:55 PM"
     },
     {
       "frontmatter": {},
@@ -167,15 +137,8 @@ export const siteData = {
       "regularPath": "/zh/",
       "relativePath": "zh/README.md",
       "key": "v-d5180e36",
-      "path": "/zh/"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/zh/config.html",
-      "relativePath": "zh/config.md",
-      "key": "v-6d81e566",
-      "path": "/zh/config.html",
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
+      "path": "/zh/",
+      "lastUpdated": "6/26/2020, 6:21:55 PM"
     },
     {
       "frontmatter": {},
@@ -205,6 +168,14 @@ export const siteData = {
           "slug": "support-or-contact"
         }
       ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/zh/config.html",
+      "relativePath": "zh/config.md",
+      "key": "v-6d81e566",
+      "path": "/zh/config.html",
       "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
