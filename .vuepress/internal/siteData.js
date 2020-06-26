@@ -40,33 +40,35 @@ export const siteData = {
             "title": "简洁至上",
             "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。",
             "link": "/guide/",
-            "imgUrl": "/favicon.png"
+            "imgUrl": "/favicon.ico"
           },
           {
             "title": "Vue驱动",
             "details": "享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。",
             "link": "/guide/",
-            "imgUrl": "/favicon.png"
+            "imgUrl": "/favicon.ico"
           },
           {
             "title": "高性能",
             "details": "VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。",
             "link": "/guide/",
-            "imgUrl": "/favicon.png"
+            "imgUrl": "/favicon.ico"
           }
         ]
       },
       "regularPath": "/",
       "relativePath": "README.md",
       "key": "v-e557697c",
-      "path": "/"
+      "path": "/",
+      "lastUpdated": "6/24/2020, 4:50:31 PM"
     },
     {
       "frontmatter": {},
       "regularPath": "/config.html",
       "relativePath": "config.md",
       "key": "v-7cbb5e41",
-      "path": "/config.html"
+      "path": "/config.html",
+      "lastUpdated": "4/9/2020, 8:29:39 PM"
     },
     {
       "frontmatter": {},
@@ -95,7 +97,8 @@ export const siteData = {
           "title": "Support or Contact",
           "slug": "support-or-contact"
         }
-      ]
+      ],
+      "lastUpdated": "6/23/2020, 6:25:20 PM"
     },
     {
       "frontmatter": {},
@@ -124,14 +127,55 @@ export const siteData = {
           "title": "Support or Contact",
           "slug": "support-or-contact"
         }
-      ]
+      ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "lang": "en-US",
+        "heroImage": "/favicon.png",
+        "bannerBg": "/favicon.png",
+        "heroText": "微服务",
+        "tagline": "公众号前端微服务",
+        "actionText": "快速上手 →",
+        "actionLink": "/guide/",
+        "navbar": true,
+        "sidebar": false,
+        "features": [
+          {
+            "title": "简洁至上",
+            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。",
+            "link": "/guide/",
+            "imgUrl": "/favicon.png"
+          },
+          {
+            "title": "Vue驱动",
+            "details": "享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。",
+            "link": "/guide/",
+            "imgUrl": "/favicon.png"
+          },
+          {
+            "title": "高性能",
+            "details": "VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。",
+            "link": "/guide/",
+            "imgUrl": "/favicon.png"
+          }
+        ]
+      },
+      "regularPath": "/zh/",
+      "relativePath": "zh/README.md",
+      "key": "v-d5180e36",
+      "path": "/zh/"
     },
     {
       "frontmatter": {},
       "regularPath": "/zh/config.html",
       "relativePath": "zh/config.md",
       "key": "v-6d81e566",
-      "path": "/zh/config.html"
+      "path": "/zh/config.html",
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
       "frontmatter": {},
@@ -160,7 +204,8 @@ export const siteData = {
           "title": "Support or Contact",
           "slug": "support-or-contact"
         }
-      ]
+      ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
       "frontmatter": {},
@@ -189,11 +234,13 @@ export const siteData = {
           "title": "Support or Contact",
           "slug": "support-or-contact"
         }
-      ]
+      ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
     }
   ],
   "themeConfig": {
-    "repo": "xunzhaotech/MicroFrontends",
+    "logo": "/favicon.ico",
+    "repo": "vuejs/vuepress",
     "nav": [
       {
         "text": "首页",
@@ -242,20 +289,25 @@ export const siteData = {
           "children": []
         }
       ]
-    }
-  },
-  "locales": {
-    "/": {
-      "lang": "en-US",
-      "title": "English",
-      "description": "Vue-powered Static Site Generator",
-      "path": "/"
     },
-    "/zh/": {
-      "lang": "zh-CN",
-      "title": "简体中文",
-      "description": "Vue 驱动的静态网站生成器",
-      "path": "/zh/"
+    "nextLinks": true,
+    "prevLinks": true,
+    "search": true,
+    "sidebarDepth": 2,
+    "displayAllHeaders": true,
+    "searchMaxSuggestions": 10,
+    "activeHeaderLinks": true,
+    "lastUpdated": "最近更新",
+    "repoLabel": "查看源码",
+    "docsRepo": "vuejs/vuepress",
+    "docsDir": "docs",
+    "docsBranch": "master",
+    "editLinks": true,
+    "editLinkText": "帮助我们改善此页面！",
+    "smoothScroll": true,
+    "algolia": {
+      "apiKey": "<API_KEY>",
+      "indexName": "<INDEX_NAME>"
     }
   }
 }

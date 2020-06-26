@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-06-26 16:29:00
+ * @LastEditTime: 2020-06-26 17:59:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -27,20 +27,20 @@ module.exports = {
   port: '80',
   temp: '.vuepress/',
   dest: '.vuepress/dist',
-  locales: {
-    // 键名是该语言所属的子路径
-    // 作为特例，默认语言可以使用 '/' 作为其路径。
-    '/': {
-      lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-      title: 'English',
-      description: 'Vue-powered Static Site Generator'
-    },
-    '/zh/': {
-      lang: 'zh-CN',
-      title: '简体中文',
-      description: 'Vue 驱动的静态网站生成器'
-    }
-  },
+  // locales: {
+  //   // 键名是该语言所属的子路径
+  //   // 作为特例，默认语言可以使用 '/' 作为其路径。
+  //   '/': {
+  //     lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
+  //     title: 'English',
+  //     description: 'Vue-powered Static Site Generator'
+  //   },
+  //   '/zh/': {
+  //     lang: 'zh-CN',
+  //     title: '简体中文',
+  //     description: 'Vue 驱动的静态网站生成器'
+  //   }
+  // },
   theme: 'loving',
   themeConfig
 }

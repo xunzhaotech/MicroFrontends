@@ -6,6 +6,7 @@ export default {
   "v-7cbb5e41": () => import("E:\\xz-template\\MicroFrontends\\docs\\config.md"),
   "v-40416856": () => import("E:\\xz-template\\MicroFrontends\\docs\\guide\\README.md"),
   "v-6b41a445": () => import("E:\\xz-template\\MicroFrontends\\docs\\pages\\README.md"),
+  "v-d5180e36": () => import("E:\\xz-template\\MicroFrontends\\docs\\zh\\README.md"),
   "v-6d81e566": () => import("E:\\xz-template\\MicroFrontends\\docs\\zh\\config.md"),
   "v-6ec597f8": () => import("E:\\xz-template\\MicroFrontends\\docs\\zh\\guide\\README.md"),
   "v-1519fcf8": () => import("E:\\xz-template\\MicroFrontends\\docs\\zh\\pages\\README.md") 

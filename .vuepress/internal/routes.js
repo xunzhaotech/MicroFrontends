@@ -53,6 +53,18 @@ export const routes = [
     redirect: "/pages/"
   },
   {
+    name: "v-d5180e36",
+    path: "/zh/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-d5180e36").then(next)
+    },
+  },
+  {
+    path: "/zh/index.html",
+    redirect: "/zh/"
+  },
+  {
     name: "v-6d81e566",
     path: "/zh/config.html",
     component: GlobalLayout,
