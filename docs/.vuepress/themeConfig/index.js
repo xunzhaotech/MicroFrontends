@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-23 16:38:32
- * @LastEditTime: 2020-06-26 18:19:52
+ * @LastEditTime: 2020-06-26 23:30:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\themeConfig\index.js
@@ -42,7 +42,7 @@ module.exports = {
     // 假如文档放在一个特定的分支下：
     docsBranch: 'master',
     // 默认是 false, 设置为 true 来启用
-    editLinks: true,
+    editLinks: false,
     // 默认为 "Edit this page"
     editLinkText: '帮助我们改善此页面！',
     smoothScroll: true,

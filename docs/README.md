@@ -42,8 +42,9 @@ Here's some contact info
 <template>
 <div class="container" >
  <div class="stars">
-          <div class="star" v-for="(item, index) in starsCount" :key="index" ref="star"></div>
-      </div>
+    <div class="star" v-for="(item, index) in starsCount" :key="index" ref="star"></div>
+    <div class="star" style="color:#fff;">小猪头生日快乐！</div>
+    </div>
   <div class="content">
     <!-- <canvas id="universe" ref="universe"></canvas> -->
     <!-- <div id="footerContent"><a href="https://twitter.com/Everlier">///</a></div> -->
@@ -204,7 +205,6 @@ export default {
       this.draw();
     },
     draw() {
-      alert(1)
       this.universe.clearRect(0, 0, width, height);
       var starsLength = stars.length;
       for (var i = 0; i < starsLength; i++) {

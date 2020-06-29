@@ -31,6 +31,24 @@ export const siteData = {
       "lastUpdated": "4/9/2020, 8:29:39 PM"
     },
     {
+      "frontmatter": {
+        "navbar": false
+      },
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-e557697c",
+      "path": "/",
+      "lastUpdated": "6/26/2020, 11:16:20 PM"
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/zh/config.html",
+      "relativePath": "zh/config.md",
+      "key": "v-6d81e566",
+      "path": "/zh/config.html",
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
       "frontmatter": {},
       "regularPath": "/guide/",
       "relativePath": "guide/README.md",
@@ -59,46 +77,6 @@ export const siteData = {
         }
       ],
       "lastUpdated": "6/23/2020, 6:25:20 PM"
-    },
-    {
-      "frontmatter": {
-        "navbar": false
-      },
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-e557697c",
-      "path": "/",
-      "lastUpdated": "6/26/2020, 6:21:55 PM"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/pages/",
-      "relativePath": "pages/README.md",
-      "key": "v-6b41a445",
-      "path": "/pages/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Welcome to GitHub Pages",
-          "slug": "welcome-to-github-pages"
-        },
-        {
-          "level": 3,
-          "title": "Markdown",
-          "slug": "markdown"
-        },
-        {
-          "level": 3,
-          "title": "Jekyll Themes",
-          "slug": "jekyll-themes"
-        },
-        {
-          "level": 3,
-          "title": "Support or Contact",
-          "slug": "support-or-contact"
-        }
-      ],
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
       "title": "Home",
@@ -142,10 +120,10 @@ export const siteData = {
     },
     {
       "frontmatter": {},
-      "regularPath": "/zh/guide/",
-      "relativePath": "zh/guide/README.md",
-      "key": "v-6ec597f8",
-      "path": "/zh/guide/",
+      "regularPath": "/pages/",
+      "relativePath": "pages/README.md",
+      "key": "v-6b41a445",
+      "path": "/pages/",
       "headers": [
         {
           "level": 2,
@@ -172,10 +150,32 @@ export const siteData = {
     },
     {
       "frontmatter": {},
-      "regularPath": "/zh/config.html",
-      "relativePath": "zh/config.md",
-      "key": "v-6d81e566",
-      "path": "/zh/config.html",
+      "regularPath": "/zh/guide/",
+      "relativePath": "zh/guide/README.md",
+      "key": "v-6ec597f8",
+      "path": "/zh/guide/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Welcome to GitHub Pages",
+          "slug": "welcome-to-github-pages"
+        },
+        {
+          "level": 3,
+          "title": "Markdown",
+          "slug": "markdown"
+        },
+        {
+          "level": 3,
+          "title": "Jekyll Themes",
+          "slug": "jekyll-themes"
+        },
+        {
+          "level": 3,
+          "title": "Support or Contact",
+          "slug": "support-or-contact"
+        }
+      ],
       "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
@@ -273,7 +273,7 @@ export const siteData = {
     "docsRepo": "vuejs/vuepress",
     "docsDir": "docs",
     "docsBranch": "master",
-    "editLinks": true,
+    "editLinks": false,
     "editLinkText": "帮助我们改善此页面！",
     "smoothScroll": true,
     "algolia": {
