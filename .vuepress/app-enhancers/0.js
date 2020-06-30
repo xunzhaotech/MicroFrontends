@@ -1,1 +1,1 @@
-export { default } from "E:\\xz-template\\MicroFrontends\\docs\\.vuepress\\enhanceApp.js"
+export { default } from "D:\\product\\MicroFrontends\\docs\\.vuepress\\enhanceApp.js"
