@@ -32,7 +32,15 @@ module.exports = {
     // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
     // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
     repoLabel: '查看源码',
-
+    personalInfo: {
+        name: 'melodydl',
+        avatar: '/avatar-top.jpeg',
+        headerBackgroundImg: '/avatar-bg.jpeg',
+        description: 'In me the tiger sniffs the rose<br/>情不知所起,却一往情深！',
+        email: 'xunzhaotech@aliyun.com',
+        location: 'Guangzhou, China',
+        // organization: '不知名某公司',
+    },
     // 以下为可选的编辑链接选项
 
     // 假如你的文档仓库和项目本身不在一个仓库：
