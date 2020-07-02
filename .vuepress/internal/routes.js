@@ -4,36 +4,16 @@
 
 import { injectComponentOption, ensureAsyncComponentsLoaded } from '@app/util'
 import rootMixins from '@internal/root-mixins'
-import GlobalLayout from "D:\\product\\MicroFrontends\\node_modules\\@vuepress\\core\\lib\\client\\components\\GlobalLayout.vue"
+import GlobalLayout from "E:\\xz-template\\MicroFrontends\\node_modules\\@vuepress\\core\\lib\\client\\components\\GlobalLayout.vue"
 
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-cfe69e28",
-    path: "/config.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-cfe69e28").then(next)
-    },
-  },
-  {
-    name: "v-2eb84e8a",
-    path: "/guide/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-2eb84e8a").then(next)
-    },
-  },
-  {
-    path: "/guide/index.html",
-    redirect: "/guide/"
-  },
-  {
-    name: "v-1b3bf577",
+    name: "v-e557697c",
     path: "/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1b3bf577").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-e557697c").then(next)
     },
   },
   {
@@ -41,31 +21,63 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-1cd74bd1",
+    name: "v-58c4a0f3",
+    path: "/about/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("about", "v-58c4a0f3").then(next)
+    },
+  },
+  {
+    path: "/about/index.html",
+    redirect: "/about/"
+  },
+  {
+    name: "v-7cbb5e41",
+    path: "/config.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-7cbb5e41").then(next)
+    },
+  },
+  {
+    name: "v-6d81e566",
     path: "/zh/config.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-1cd74bd1").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-6d81e566").then(next)
     },
   },
   {
-    name: "v-8bcab20c",
-    path: "/pages/",
+    name: "v-40416856",
+    path: "/guide/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-8bcab20c").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-40416856").then(next)
     },
   },
   {
-    path: "/pages/index.html",
-    redirect: "/pages/"
+    path: "/guide/index.html",
+    redirect: "/guide/"
   },
   {
-    name: "v-507163ed",
+    name: "v-d5180e36",
+    path: "/zh/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-d5180e36").then(next)
+    },
+  },
+  {
+    path: "/zh/index.html",
+    redirect: "/zh/"
+  },
+  {
+    name: "v-1519fcf8",
     path: "/zh/pages/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-507163ed").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-1519fcf8").then(next)
     },
   },
   {
@@ -73,28 +85,28 @@ export const routes = [
     redirect: "/zh/pages/"
   },
   {
-    name: "v-abc60226",
+    name: "v-6b41a445",
+    path: "/pages/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6b41a445").then(next)
+    },
+  },
+  {
+    path: "/pages/index.html",
+    redirect: "/pages/"
+  },
+  {
+    name: "v-6ec597f8",
     path: "/zh/guide/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-abc60226").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-6ec597f8").then(next)
     },
   },
   {
     path: "/zh/guide/index.html",
     redirect: "/zh/guide/"
-  },
-  {
-    name: "v-9dc3314c",
-    path: "/zh/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-9dc3314c").then(next)
-    },
-  },
-  {
-    path: "/zh/index.html",
-    redirect: "/zh/"
   },
   {
     path: '*',

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-06-26 17:59:37
+ * @LastEditTime: 2020-07-02 22:27:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -41,6 +41,6 @@ module.exports = {
   //     description: 'Vue 驱动的静态网站生成器'
   //   }
   // },
-  theme: 'loving',
+  // theme: 'loving',
   themeConfig
 }

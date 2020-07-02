@@ -1,19 +1,29 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-06-25 21:53:52
+ * @LastEditTime: 2020-07-01 22:39:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
 --> 
 <template>
   <div id="global-layout">
-    <div class="stars">
+    <!-- <div class="stars">
         <div class="star" v-for="(item, index) in starsCount" :key="index" ref="star"></div>
-    </div>
-    <header><h1></h1></header>
+    </div> -->
+    <header>
+      <Content slot-key="header"/>
+    </header>
+    <main>
+      <Content/>
+    </main>
+    <footer>
+      <Content slot-key="footer"/>
+    </footer>
+  </div>
+    <!-- <header><h1>121212</h1></header>
     <component :is="layout" />
-    <footer><h1></h1></footer>
+    <footer><h1>121212</h1></footer> -->
   </div>
 </template>
 
@@ -50,41 +60,8 @@ export default {
 </script>
 <style lang="less" scoped>
  #global-layout {
-    background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #1b2947);
-    background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
-    background-attachment: scroll;
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: 100vh;
-    .stars {
-      transform: perspective(500px);
-      transform-style: preserve-3d;
-      position: absolute;
-      // left: 0;
-      // top:0;
-      // bottom:0;
-      // right: 0;
-      perspective-origin: 50% 100%;
-      left: 50%;
-      animation: rotate 90s infinite linear;
-      bottom: 0;
-    }
-    .star {
-      width: 3px;
-      height: 3px;
-      background: #f7f7b8;
-      position: absolute;
-      top: 0;
-      left: 0;
-      backface-visibility: hidden;
-    }
-  }
-  @keyframes rotate {
-    0% {
-      transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
-    }
-    100% {
-      transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
-    }
-  }
+   width:100%;
+   min-height: 100vh;
+   background:red;
+ }
 </style>

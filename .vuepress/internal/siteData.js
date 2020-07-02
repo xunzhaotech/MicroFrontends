@@ -23,18 +23,81 @@ export const siteData = {
   ],
   "pages": [
     {
+      "title": "Home",
+      "frontmatter": {
+        "home": true,
+        "lang": "en-US",
+        "heroImage": "/favicon.png",
+        "bannerBg": "/favicon.png",
+        "heroText": "微服务",
+        "tagline": "公众号前端微服务",
+        "actionText": "快速上手 →",
+        "actionLink": "/guide/",
+        "navbar": false,
+        "sidebar": false,
+        "features": [
+          {
+            "title": "简洁至上",
+            "details": "以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。",
+            "link": "/guide/",
+            "imgUrl": "/favicon.ico"
+          },
+          {
+            "title": "Vue驱动",
+            "details": "享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。",
+            "link": "/guide/",
+            "imgUrl": "/favicon.ico"
+          },
+          {
+            "title": "高性能",
+            "details": "VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。",
+            "link": "/guide/",
+            "imgUrl": "/favicon.ico"
+          }
+        ],
+        "footer": "MIT Licensed | Copyright © 2018-present Evan You"
+      },
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-e557697c",
+      "path": "/",
+      "lastUpdated": "6/29/2020, 10:52:05 PM"
+    },
+    {
+      "title": "About",
+      "frontmatter": {
+        "layout": "about",
+        "title": "About",
+        "subtitle": "You can be great but you don't have to be perfect",
+        "headerImage": "/about-bg.jpg"
+      },
+      "regularPath": "/about/",
+      "relativePath": "about/README.md",
+      "key": "v-58c4a0f3",
+      "path": "/about/",
+      "lastUpdated": "6/30/2020, 3:59:07 PM"
+    },
+    {
       "frontmatter": {},
       "regularPath": "/config.html",
       "relativePath": "config.md",
-      "key": "v-cfe69e28",
+      "key": "v-7cbb5e41",
       "path": "/config.html",
       "lastUpdated": "4/9/2020, 8:29:39 PM"
     },
     {
       "frontmatter": {},
+      "regularPath": "/zh/config.html",
+      "relativePath": "zh/config.md",
+      "key": "v-6d81e566",
+      "path": "/zh/config.html",
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
+      "frontmatter": {},
       "regularPath": "/guide/",
       "relativePath": "guide/README.md",
-      "key": "v-2eb84e8a",
+      "key": "v-40416856",
       "path": "/guide/",
       "headers": [
         {
@@ -59,114 +122,6 @@ export const siteData = {
         }
       ],
       "lastUpdated": "6/23/2020, 6:25:20 PM"
-    },
-    {
-      "frontmatter": {
-        "navbar": false
-      },
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-1b3bf577",
-      "path": "/",
-      "lastUpdated": "6/29/2020, 10:52:05 PM"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/zh/config.html",
-      "relativePath": "zh/config.md",
-      "key": "v-1cd74bd1",
-      "path": "/zh/config.html",
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/pages/",
-      "relativePath": "pages/README.md",
-      "key": "v-8bcab20c",
-      "path": "/pages/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Welcome to GitHub Pages",
-          "slug": "welcome-to-github-pages"
-        },
-        {
-          "level": 3,
-          "title": "Markdown",
-          "slug": "markdown"
-        },
-        {
-          "level": 3,
-          "title": "Jekyll Themes",
-          "slug": "jekyll-themes"
-        },
-        {
-          "level": 3,
-          "title": "Support or Contact",
-          "slug": "support-or-contact"
-        }
-      ],
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/zh/pages/",
-      "relativePath": "zh/pages/README.md",
-      "key": "v-507163ed",
-      "path": "/zh/pages/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Welcome to GitHub Pages",
-          "slug": "welcome-to-github-pages"
-        },
-        {
-          "level": 3,
-          "title": "Markdown",
-          "slug": "markdown"
-        },
-        {
-          "level": 3,
-          "title": "Jekyll Themes",
-          "slug": "jekyll-themes"
-        },
-        {
-          "level": 3,
-          "title": "Support or Contact",
-          "slug": "support-or-contact"
-        }
-      ],
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/zh/guide/",
-      "relativePath": "zh/guide/README.md",
-      "key": "v-abc60226",
-      "path": "/zh/guide/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Welcome to GitHub Pages",
-          "slug": "welcome-to-github-pages"
-        },
-        {
-          "level": 3,
-          "title": "Markdown",
-          "slug": "markdown"
-        },
-        {
-          "level": 3,
-          "title": "Jekyll Themes",
-          "slug": "jekyll-themes"
-        },
-        {
-          "level": 3,
-          "title": "Support or Contact",
-          "slug": "support-or-contact"
-        }
-      ],
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
       "title": "Home",
@@ -204,9 +159,99 @@ export const siteData = {
       },
       "regularPath": "/zh/",
       "relativePath": "zh/README.md",
-      "key": "v-9dc3314c",
+      "key": "v-d5180e36",
       "path": "/zh/",
       "lastUpdated": "6/26/2020, 6:21:55 PM"
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/zh/pages/",
+      "relativePath": "zh/pages/README.md",
+      "key": "v-1519fcf8",
+      "path": "/zh/pages/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Welcome to GitHub Pages",
+          "slug": "welcome-to-github-pages"
+        },
+        {
+          "level": 3,
+          "title": "Markdown",
+          "slug": "markdown"
+        },
+        {
+          "level": 3,
+          "title": "Jekyll Themes",
+          "slug": "jekyll-themes"
+        },
+        {
+          "level": 3,
+          "title": "Support or Contact",
+          "slug": "support-or-contact"
+        }
+      ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/pages/",
+      "relativePath": "pages/README.md",
+      "key": "v-6b41a445",
+      "path": "/pages/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Welcome to GitHub Pages",
+          "slug": "welcome-to-github-pages"
+        },
+        {
+          "level": 3,
+          "title": "Markdown",
+          "slug": "markdown"
+        },
+        {
+          "level": 3,
+          "title": "Jekyll Themes",
+          "slug": "jekyll-themes"
+        },
+        {
+          "level": 3,
+          "title": "Support or Contact",
+          "slug": "support-or-contact"
+        }
+      ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/zh/guide/",
+      "relativePath": "zh/guide/README.md",
+      "key": "v-6ec597f8",
+      "path": "/zh/guide/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Welcome to GitHub Pages",
+          "slug": "welcome-to-github-pages"
+        },
+        {
+          "level": 3,
+          "title": "Markdown",
+          "slug": "markdown"
+        },
+        {
+          "level": 3,
+          "title": "Jekyll Themes",
+          "slug": "jekyll-themes"
+        },
+        {
+          "level": 3,
+          "title": "Support or Contact",
+          "slug": "support-or-contact"
+        }
+      ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
     }
   ],
   "themeConfig": {
@@ -270,6 +315,14 @@ export const siteData = {
     "activeHeaderLinks": true,
     "lastUpdated": "最近更新",
     "repoLabel": "查看源码",
+    "personalInfo": {
+      "name": "melodydl",
+      "avatar": "/avatar-top.jpeg",
+      "headerBackgroundImg": "/avatar-bg.jpeg",
+      "description": "In me the tiger sniffs the rose<br/>情不知所起,却一往情深！",
+      "email": "xunzhaotech@aliyun.com",
+      "location": "Guangzhou, China"
+    },
     "docsRepo": "vuejs/vuepress",
     "docsDir": "docs",
     "docsBranch": "master",
