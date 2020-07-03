@@ -65,6 +65,14 @@ export const siteData = {
     },
     {
       "frontmatter": {},
+      "regularPath": "/config.html",
+      "relativePath": "config.md",
+      "key": "v-cfe69e28",
+      "path": "/config.html",
+      "lastUpdated": "4/9/2020, 8:29:39 PM"
+    },
+    {
+      "frontmatter": {},
       "regularPath": "/guide/",
       "relativePath": "guide/README.md",
       "key": "v-2eb84e8a",
@@ -106,14 +114,6 @@ export const siteData = {
       "key": "v-b0c4b8b0",
       "path": "/about/",
       "lastUpdated": "6/30/2020, 3:59:07 PM"
-    },
-    {
-      "frontmatter": {},
-      "regularPath": "/config.html",
-      "relativePath": "config.md",
-      "key": "v-cfe69e28",
-      "path": "/config.html",
-      "lastUpdated": "4/9/2020, 8:29:39 PM"
     },
     {
       "title": "Home",
@@ -187,14 +187,6 @@ export const siteData = {
     },
     {
       "frontmatter": {},
-      "regularPath": "/zh/config.html",
-      "relativePath": "zh/config.md",
-      "key": "v-1cd74bd1",
-      "path": "/zh/config.html",
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
-    },
-    {
-      "frontmatter": {},
       "regularPath": "/zh/guide/",
       "relativePath": "zh/guide/README.md",
       "key": "v-abc60226",
@@ -221,6 +213,14 @@ export const siteData = {
           "slug": "support-or-contact"
         }
       ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/zh/config.html",
+      "relativePath": "zh/config.md",
+      "key": "v-1cd74bd1",
+      "path": "/zh/config.html",
       "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {

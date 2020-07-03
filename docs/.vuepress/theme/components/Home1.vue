@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <!-- <main class="home" aria-labelledby="main-title">
+<div>
+ <!-- <div class="home">
+    <main class="home" aria-labelledby="main-title">
       <header class="hero">
         <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" class="hero-logo"/>
 
@@ -59,31 +60,32 @@
         </a-row>
       </div>
       <div :class="{ 'footer-divider': isDivider, 'footer-bottom': true }">{{ data.footer }}</div>
-    </div> -->
-    <canvas id="rain" ref="rain"></canvas>
-    <div class="container">
-      <!-- <div class="stars">
-          <div class="star" v-for="(item, index) in starsCount" :key="index" ref="star"></div>
-      </div> -->
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div> 
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div> 
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
-      <div class="meteor"></div>
     </div>
+  </div> -->
+  <canvas id="rain" ref="rain"></canvas>
+  <div class="container">
+    <!-- <div class="stars">
+        <div class="star" v-for="(item, index) in starsCount" :key="index" ref="star"></div>
+    </div> -->
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div> 
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div> 
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
+    <div class="meteor"></div>
   </div>
+</div>
 </template>
 
 <script>
@@ -193,10 +195,10 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less"  scoped>
 @import '../styles/palette.less';
-
 .home {
+  background: transparent;
   padding: @navbarHeight 2rem 0;
   max-width: @homePageWidth;
   margin: 0px auto;
@@ -422,6 +424,7 @@ export default {
   }
 }
 .container{
+    z-index: -10;
     position: fixed;
     top:0;
     left: 0;

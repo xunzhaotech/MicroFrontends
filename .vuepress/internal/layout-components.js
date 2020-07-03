@@ -4,5 +4,6 @@
 export default {
   "NotFound": () => import("D:\\product\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\404.vue"),
   "Layout copy": () => import("D:\\product\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\Layout copy.vue"),
-  "Layout": () => import("D:\\product\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\Layout.vue") 
+  "Layout": () => import("D:\\product\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\Layout.vue"),
+  "Layout1": () => import("D:\\product\\MicroFrontends\\docs\\.vuepress\\theme\\layouts\\Layout1.vue") 
 }

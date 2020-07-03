@@ -3,12 +3,12 @@
  */
 export default {
   "v-1b3bf577": () => import("D:\\product\\MicroFrontends\\docs\\README.md"),
+  "v-cfe69e28": () => import("D:\\product\\MicroFrontends\\docs\\config.md"),
   "v-2eb84e8a": () => import("D:\\product\\MicroFrontends\\docs\\guide\\README.md"),
   "v-b0c4b8b0": () => import("D:\\product\\MicroFrontends\\docs\\about\\README.md"),
-  "v-cfe69e28": () => import("D:\\product\\MicroFrontends\\docs\\config.md"),
   "v-9dc3314c": () => import("D:\\product\\MicroFrontends\\docs\\zh\\README.md"),
   "v-8bcab20c": () => import("D:\\product\\MicroFrontends\\docs\\pages\\README.md"),
-  "v-1cd74bd1": () => import("D:\\product\\MicroFrontends\\docs\\zh\\config.md"),
   "v-abc60226": () => import("D:\\product\\MicroFrontends\\docs\\zh\\guide\\README.md"),
+  "v-1cd74bd1": () => import("D:\\product\\MicroFrontends\\docs\\zh\\config.md"),
   "v-507163ed": () => import("D:\\product\\MicroFrontends\\docs\\zh\\pages\\README.md") 
 }
