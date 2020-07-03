@@ -61,10 +61,6 @@ export default {
       transform: perspective(500px);
       transform-style: preserve-3d;
       position: absolute;
-      // left: 0;
-      // top:0;
-      // bottom:0;
-      // right: 0;
       perspective-origin: 50% 100%;
       left: 50%;
       animation: rotate 90s infinite linear;

@@ -3,6 +3,62 @@ export const extRE = /\.(md|html)$/
 export const endingSlashRE = /\/$/
 export const outboundRE = /^[a-z]+:/i
 
+export class Rain {
+  constructor(canContent, w, h) {
+    this.canContent = canContent
+    this.x = this.random(0, w)
+    this.y = 0
+    this.v = this.random(4, 5)
+    this.h = this.random(0.8 * h, 0.9 * h)
+    this.r = 1//初始半径
+    this.vr = this.random(0.4, 0.6) //半径增长率
+    this.a = 1//初始透明度
+    this.va = 0.96 // 透明度变化系数
+    this.w = w
+    this.h = h
+  }
+  init() {
+    this.x = this.random(0, this.w)
+    this.y = 0
+    this.v = this.random(4, 5)
+    this.h = this.random(0.8 * this.h, 0.9 * this.h)
+    this.r = 1//初始半径
+    this.vr = this.random(0.4, 0.6) //半径增长率
+    this.a = 1//初始透明度
+    this.va = 0.96 // 透明度变化系数
+  }
+  random(min, max) {
+    return Math.random() * (max - min) + min
+  }
+  draw() {
+    if (this.y < this.h) {
+      this.canContent.fillStyle = "#33ffff" //拿一只画实心图形的红色的笔
+      this.canContent.fillRect(this.x, this.y, 2, 10) // 画一个实心的矩形
+    } else {
+      this.canContent.strokeStyle = "rgba(51,255,255," + this.a + ")"
+      this.canContent.beginPath() //重新拿起笔
+      this.canContent.arc(this.x, this.y, this.r, 0, Math.PI * 2)
+      this.canContent.stroke();
+    }
+    
+  }
+  move() {
+    if (this.y < this.h) {
+      this.y += this.v
+    } else {
+      if (this.a > 0.02) {
+        this.r += this.vr
+        if(this.r > 50){
+          this.a *= this.va
+        }
+      } else {
+        this.init()
+      }
+    }
+      this.draw()
+    }
+}
+
 export function normalize (path) {
   return decodeURI(path)
     .replace(hashRE, '')
