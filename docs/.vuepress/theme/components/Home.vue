@@ -1,7 +1,8 @@
 <template>
-  <div>
-    <!-- <main class="home" aria-labelledby="main-title">
-      <header class="hero">
+  <div style="position:relative;">
+    <div class="overlay"></div>
+    <main class="home" aria-labelledby="main-title">
+      <!-- <header class="hero">
         <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" class="hero-logo"/>
 
         <h1 v-if="data.heroText !== null" id="main-title">
@@ -35,11 +36,11 @@
           <h2>{{ feature.title }}</h2>
           <p>{{ feature.details }}</p>
         </div>
-      </div>
+      </div> -->
 
       <Content class="theme-antdocs-content custom" />
     </main>
-    <div v-if="data.footer" class="footer">
+    <!-- <div v-if="data.footer" class="footer">
       <div v-if="data.footerWrap && data.footerWrap.length" class="footer-container">
         <a-row :gutter="{ md: 0,lg:32 }" type="flex" justify="space-around" class="add-bottom">
           <a-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6" v-for="(footerWrap, index) in data.footerWrap" :key="index">
@@ -195,13 +196,20 @@ export default {
 
 <style lang="less" scoped>
 @import '../styles/palette.less';
-
+.overlay {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
 .home {
-  padding: @navbarHeight 2rem 0;
-  max-width: @homePageWidth;
+  // padding: @navbarHeight 2rem 0;
+  // max-width: @homePageWidth;
   margin: 0px auto;
   display: block;
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
 
   .hero {
     text-align: center;
