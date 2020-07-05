@@ -3,6 +3,107 @@ export const extRE = /\.(md|html)$/
 export const endingSlashRE = /\/$/
 export const outboundRE = /^[a-z]+:/i
 
+export function getProbability(percents) {
+  return ((Math.floor(Math.random() * 1000) + 1) < percents * 10);
+}
+
+export function getRandInterval(min, max) {
+  return (Math.random() * (max - min) + min);
+}
+export function draw() {
+  universe.clearRect(0, 0, width, height);
+
+  var starsLength = stars.length;
+
+  for (var i = 0; i < starsLength; i++) {
+    var star = stars[i];
+    star.move();
+    star.fadeIn();
+    star.fadeOut();
+    star.draw();
+  }
+
+  window.requestAnimationFrame(draw);
+}
+export class Star {
+  constructor(universe, width, height, first, speedCoeff, giantColor, starColor, cometColor) {
+    this.universe = universe
+    this.width = width
+    this.height = height
+    this.first = first
+    this.speedCoeff = speedCoeff
+    this.giantColor= giantColor
+    this.starColor =  starColor 
+    this.cometColor = cometColor
+  }
+  reset() {
+    this.giant = getProbability(3);
+    this.comet = this.giant || this.first ? false : getProbability(10);
+    this.x = getRandInterval(0, this.width - 10);
+    this.y = getRandInterval(0, this.height);
+    this.r = getRandInterval(1.1, 2.6);
+    this.dx = getRandInterval(this.speedCoeff, 6 * this.speedCoeff) + (this.comet + 1 - 1) * this.speedCoeff * getRandInterval(50, 120) + this.speedCoeff * 2;
+    this.dy = -getRandInterval(this.speedCoeff, 6 * this.speedCoeff) - (this.comet + 1 - 1) * this.speedCoeff * getRandInterval(50, 120);
+    this.fadingOut = null;
+    this.fadingIn = true;
+    this.opacity = 0;
+    this.opacityTresh = getRandInterval(.2, 1 - (this.comet + 1 - 1) * .4);
+    this.do = getRandInterval(0.0005, 0.002) + (this.comet + 1 - 1) * .001;
+  }
+
+  fadeIn () {
+    if (this.fadingIn) {
+      this.fadingIn = this.opacity > this.opacityTresh ? false : true;
+      this.opacity += this.do;
+    }
+  }
+
+  fadeOut() {
+    if (this.fadingOut) {
+      this.fadingOut = this.opacity < 0 ? false : true;
+      this.opacity -= this.do / 2;
+      if (this.x > this.width || this.y < 0) {
+        this.fadingOut = false;
+        this.reset();
+      }
+    }
+  }
+
+  draw () {
+    this.universe.beginPath();
+    if (this.giant) {
+      this.universe.fillStyle = 'rgba(' + this.giantColor + ',' + this.opacity + ')';
+      this.universe.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);
+    } else if (this.comet) {
+      this.universe.fillStyle = 'rgba(' + this.cometColor + ',' + this.opacity + ')';
+      this.universe.arc(this.x, this.y, 1.5, 0, 2 * Math.PI, false);
+
+      //comet tail
+      for (let i = 0; i < 30; i++) {
+        this.universe.fillStyle = 'rgba(' + this.cometColor + ',' + (this.opacity - (this.opacity / 20) * i) + ')';
+        this.universe.rect(this.x - this.dx / 4 * i, this.y - this.dy / 4 * i - 2, 2, 2);
+        this.universe.fill();
+      }
+    } else {
+      this.universe.fillStyle = 'rgba(' + this.starColor + ',' + this.opacity + ')';
+      this.universe.rect(this.x, this.y, this.r, this.r);
+    }
+
+    this.universe.closePath();
+    this.universe.fill();
+  }
+
+  move() {
+    this.x += this.dx;
+    this.y += this.dy;
+    if (this.fadingOut === false) {
+      this.reset();
+    }
+    if (this.x > this.width - (this.width / 4) || this.y < 0) {
+      this.fadingOut = true;
+    }
+  }
+}
 export class Rain {
   constructor(canContent, w, h) {
     this.canContent = canContent

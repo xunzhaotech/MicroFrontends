@@ -23,14 +23,22 @@ export const siteData = {
   ],
   "pages": [
     {
+      "frontmatter": {},
+      "regularPath": "/config.html",
+      "relativePath": "config.md",
+      "key": "v-7cbb5e41",
+      "path": "/config.html",
+      "lastUpdated": "4/9/2020, 8:29:39 PM"
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
         "lang": "en-US",
-        "heroImage": "/favicon.png",
-        "bannerBg": "/favicon.png",
-        "heroText": "微服务",
-        "tagline": "公众号前端微服务",
+        "heroImage": "/favicon.ico",
+        "bannerBg": "/favicon.ico",
+        "heroText": "梁爽爽专属教程(独家)",
+        "tagline": "云白先生",
         "actionText": "快速上手 →",
         "actionLink": "/guide/",
         "navbar": false,
@@ -59,23 +67,29 @@ export const siteData = {
       },
       "regularPath": "/",
       "relativePath": "README.md",
-      "key": "v-1b3bf577",
+      "key": "v-e557697c",
       "path": "/",
       "lastUpdated": "7/2/2020, 11:12:45 PM"
     },
     {
-      "frontmatter": {},
-      "regularPath": "/config.html",
-      "relativePath": "config.md",
-      "key": "v-cfe69e28",
-      "path": "/config.html",
-      "lastUpdated": "4/9/2020, 8:29:39 PM"
+      "title": "About",
+      "frontmatter": {
+        "layout": "about",
+        "title": "About",
+        "subtitle": "You can be great but you don't have to be perfect",
+        "headerImage": "/about-bg.jpg"
+      },
+      "regularPath": "/about/",
+      "relativePath": "about/README.md",
+      "key": "v-58c4a0f3",
+      "path": "/about/",
+      "lastUpdated": "6/30/2020, 3:59:07 PM"
     },
     {
       "frontmatter": {},
       "regularPath": "/guide/",
       "relativePath": "guide/README.md",
-      "key": "v-2eb84e8a",
+      "key": "v-40416856",
       "path": "/guide/",
       "headers": [
         {
@@ -102,18 +116,34 @@ export const siteData = {
       "lastUpdated": "6/23/2020, 6:25:20 PM"
     },
     {
-      "title": "About",
-      "frontmatter": {
-        "layout": "about",
-        "title": "About",
-        "subtitle": "You can be great but you don't have to be perfect",
-        "headerImage": "/about-bg.jpg"
-      },
-      "regularPath": "/about/",
-      "relativePath": "about/README.md",
-      "key": "v-b0c4b8b0",
-      "path": "/about/",
-      "lastUpdated": "6/30/2020, 3:59:07 PM"
+      "frontmatter": {},
+      "regularPath": "/pages/",
+      "relativePath": "pages/README.md",
+      "key": "v-6b41a445",
+      "path": "/pages/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Welcome to GitHub Pages",
+          "slug": "welcome-to-github-pages"
+        },
+        {
+          "level": 3,
+          "title": "Markdown",
+          "slug": "markdown"
+        },
+        {
+          "level": 3,
+          "title": "Jekyll Themes",
+          "slug": "jekyll-themes"
+        },
+        {
+          "level": 3,
+          "title": "Support or Contact",
+          "slug": "support-or-contact"
+        }
+      ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
       "title": "Home",
@@ -151,45 +181,23 @@ export const siteData = {
       },
       "regularPath": "/zh/",
       "relativePath": "zh/README.md",
-      "key": "v-9dc3314c",
+      "key": "v-d5180e36",
       "path": "/zh/",
       "lastUpdated": "6/26/2020, 6:21:55 PM"
     },
     {
       "frontmatter": {},
-      "regularPath": "/pages/",
-      "relativePath": "pages/README.md",
-      "key": "v-8bcab20c",
-      "path": "/pages/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Welcome to GitHub Pages",
-          "slug": "welcome-to-github-pages"
-        },
-        {
-          "level": 3,
-          "title": "Markdown",
-          "slug": "markdown"
-        },
-        {
-          "level": 3,
-          "title": "Jekyll Themes",
-          "slug": "jekyll-themes"
-        },
-        {
-          "level": 3,
-          "title": "Support or Contact",
-          "slug": "support-or-contact"
-        }
-      ],
+      "regularPath": "/zh/config.html",
+      "relativePath": "zh/config.md",
+      "key": "v-6d81e566",
+      "path": "/zh/config.html",
       "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
       "frontmatter": {},
       "regularPath": "/zh/guide/",
       "relativePath": "zh/guide/README.md",
-      "key": "v-abc60226",
+      "key": "v-6ec597f8",
       "path": "/zh/guide/",
       "headers": [
         {
@@ -217,17 +225,9 @@ export const siteData = {
     },
     {
       "frontmatter": {},
-      "regularPath": "/zh/config.html",
-      "relativePath": "zh/config.md",
-      "key": "v-1cd74bd1",
-      "path": "/zh/config.html",
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
-    },
-    {
-      "frontmatter": {},
       "regularPath": "/zh/pages/",
       "relativePath": "zh/pages/README.md",
-      "key": "v-507163ed",
+      "key": "v-1519fcf8",
       "path": "/zh/pages/",
       "headers": [
         {
