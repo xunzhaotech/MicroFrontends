@@ -1,51 +1,34 @@
+---
+lang: en-US
+navbar: true
+sidebar: true
+---
 
-::: slot base
-1212121
-:::
-::: slot header
-# Here might be a page title
-:::
+# 概述
+对于大部分没有接触过Photoshop的人来说，对其的印象还在于这是一门高深的技术，一门神奇的技术，一门可以化腐朽为神奇的技术，殊不知软件设计之初就决定了它易用性的发展方向，Photoshop在经历了N年的发展，早已不是那个设计师的PS，它是大众的PS，虽然我们不能达到大神们将熊猫活活P成美女的功夫，但是将照片变得更好看，做一些表情包，甚至是设计一些海报和名片都是可以实现的。下面让我们大家来好好看看有哪些值得我们学习PS教程的理由：
+## 产品常用工具
+**原型制作工具**
 
-- A Paragraph
-- Another Paragraph
+axure、墨刀、process on、sketch破解版本库（http://xclient.info/s/sketch.html?t=d25a90f5473fbcc37f1d5a505e60d08418273aef#versions）
 
-::: slot footer
-Here's some contact info
-:::
-## Welcome to GitHub Pages
+**流程图制作工具**
 
-You can use the [editor on GitHub](https://github.com/xunzhaotech/MicroFrontends/edit/master/docs/README.md) to maintain and preview the content for your website in Markdown files.
+visio、process on（线上流程图）、axure
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**脑图制作工具**
 
-### Markdown
+Xmind、mindmanager、wps
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## 安装包下载
+链接：https://pan.baidu.com/s/1aZqWe7ai1BDI9i8PWNnjSA 
 
-```markdown
-Syntax highlighted code block
+提取码：i1zb
+## 线上地址
+https://pixlr.com/editor/
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xunzhaotech/MicroFrontends/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## 本地安装
+## Lesson1
+## Lesson2
+## Lesson3
+## Lesson4

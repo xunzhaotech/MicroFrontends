@@ -9,14 +9,6 @@ import GlobalLayout from "E:\\xz-template\\MicroFrontends\\node_modules\\@vuepre
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-7cbb5e41",
-    path: "/config.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-7cbb5e41").then(next)
-    },
-  },
-  {
     name: "v-e557697c",
     path: "/",
     component: GlobalLayout,
@@ -39,6 +31,14 @@ export const routes = [
   {
     path: "/about/index.html",
     redirect: "/about/"
+  },
+  {
+    name: "v-7cbb5e41",
+    path: "/config.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-7cbb5e41").then(next)
+    },
   },
   {
     name: "v-40416856",
@@ -77,14 +77,6 @@ export const routes = [
     redirect: "/zh/"
   },
   {
-    name: "v-6d81e566",
-    path: "/zh/config.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6d81e566").then(next)
-    },
-  },
-  {
     name: "v-6ec597f8",
     path: "/zh/guide/",
     component: GlobalLayout,
@@ -97,6 +89,14 @@ export const routes = [
     redirect: "/zh/guide/"
   },
   {
+    name: "v-6d81e566",
+    path: "/zh/config.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6d81e566").then(next)
+    },
+  },
+  {
     name: "v-1519fcf8",
     path: "/zh/pages/",
     component: GlobalLayout,
@@ -107,6 +107,14 @@ export const routes = [
   {
     path: "/zh/pages/index.html",
     redirect: "/zh/pages/"
+  },
+  {
+    name: "v-d89be1e8",
+    path: "/guide/README1.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-d89be1e8").then(next)
+    },
   },
   {
     path: '*',

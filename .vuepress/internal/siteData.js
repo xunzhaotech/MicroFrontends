@@ -23,14 +23,6 @@ export const siteData = {
   ],
   "pages": [
     {
-      "frontmatter": {},
-      "regularPath": "/config.html",
-      "relativePath": "config.md",
-      "key": "v-7cbb5e41",
-      "path": "/config.html",
-      "lastUpdated": "4/9/2020, 8:29:39 PM"
-    },
-    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -69,7 +61,7 @@ export const siteData = {
       "relativePath": "README.md",
       "key": "v-e557697c",
       "path": "/",
-      "lastUpdated": "7/2/2020, 11:12:45 PM"
+      "lastUpdated": "7/5/2020, 11:17:13 PM"
     },
     {
       "title": "About",
@@ -87,6 +79,19 @@ export const siteData = {
     },
     {
       "frontmatter": {},
+      "regularPath": "/config.html",
+      "relativePath": "config.md",
+      "key": "v-7cbb5e41",
+      "path": "/config.html",
+      "lastUpdated": "4/9/2020, 8:29:39 PM"
+    },
+    {
+      "title": "概述",
+      "frontmatter": {
+        "lang": "en-US",
+        "navbar": true,
+        "sidebar": true
+      },
       "regularPath": "/guide/",
       "relativePath": "guide/README.md",
       "key": "v-40416856",
@@ -94,23 +99,43 @@ export const siteData = {
       "headers": [
         {
           "level": 2,
-          "title": "Welcome to GitHub Pages",
-          "slug": "welcome-to-github-pages"
+          "title": "产品常用工具",
+          "slug": "产品常用工具"
         },
         {
-          "level": 3,
-          "title": "Markdown",
-          "slug": "markdown"
+          "level": 2,
+          "title": "安装包下载",
+          "slug": "安装包下载"
         },
         {
-          "level": 3,
-          "title": "Jekyll Themes",
-          "slug": "jekyll-themes"
+          "level": 2,
+          "title": "线上地址",
+          "slug": "线上地址"
         },
         {
-          "level": 3,
-          "title": "Support or Contact",
-          "slug": "support-or-contact"
+          "level": 2,
+          "title": "本地安装",
+          "slug": "本地安装"
+        },
+        {
+          "level": 2,
+          "title": "Lesson1",
+          "slug": "lesson1"
+        },
+        {
+          "level": 2,
+          "title": "Lesson2",
+          "slug": "lesson2"
+        },
+        {
+          "level": 2,
+          "title": "Lesson3",
+          "slug": "lesson3"
+        },
+        {
+          "level": 2,
+          "title": "Lesson4",
+          "slug": "lesson4"
         }
       ],
       "lastUpdated": "6/23/2020, 6:25:20 PM"
@@ -187,14 +212,6 @@ export const siteData = {
     },
     {
       "frontmatter": {},
-      "regularPath": "/zh/config.html",
-      "relativePath": "zh/config.md",
-      "key": "v-6d81e566",
-      "path": "/zh/config.html",
-      "lastUpdated": "6/26/2020, 4:31:51 PM"
-    },
-    {
-      "frontmatter": {},
       "regularPath": "/zh/guide/",
       "relativePath": "zh/guide/README.md",
       "key": "v-6ec597f8",
@@ -221,6 +238,14 @@ export const siteData = {
           "slug": "support-or-contact"
         }
       ],
+      "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/zh/config.html",
+      "relativePath": "zh/config.md",
+      "key": "v-6d81e566",
+      "path": "/zh/config.html",
       "lastUpdated": "6/26/2020, 4:31:51 PM"
     },
     {
@@ -252,6 +277,35 @@ export const siteData = {
         }
       ],
       "lastUpdated": "6/26/2020, 4:31:51 PM"
+    },
+    {
+      "frontmatter": {},
+      "regularPath": "/guide/README1.html",
+      "relativePath": "guide/README1.md",
+      "key": "v-d89be1e8",
+      "path": "/guide/README1.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Welcome to GitHub Pages",
+          "slug": "welcome-to-github-pages"
+        },
+        {
+          "level": 3,
+          "title": "Markdown",
+          "slug": "markdown"
+        },
+        {
+          "level": 3,
+          "title": "Jekyll Themes",
+          "slug": "jekyll-themes"
+        },
+        {
+          "level": 3,
+          "title": "Support or Contact",
+          "slug": "support-or-contact"
+        }
+      ]
     }
   ],
   "themeConfig": {

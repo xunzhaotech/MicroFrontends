@@ -418,7 +418,7 @@ export default {
       }
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.3rem;
         color: #fff;
       }
 
@@ -471,13 +471,13 @@ export default {
 
         .hero-logo {
           max-width: 100%;
-          // max-height: 180px;
+          max-height: 180px;
           display: block;
           margin: 5rem auto 1.5rem;
         }
 
         h1 {
-          font-size: 3rem;
+          font-size: 2rem;
           color:#fff;
         }
 
