@@ -1,7 +1,7 @@
 {
   "name": "vuepress-theme-loving",
   "title": "loving of VuePress",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An Ant Design style theme for VuePress.",
   "main": "index.js",
   "keywords": [
@@ -33,6 +33,7 @@
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "lodash": "^4.17.15",
+    "vue-particles": "^1.0.9",
     "vuepress-plugin-cat": "^1.0.3",
     "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-smooth-scroll": "^0.0.9",
