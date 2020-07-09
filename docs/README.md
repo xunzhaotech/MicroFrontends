@@ -1,6 +1,7 @@
 ---
 home: true
 lang: en-US
+navbar: false
 heroImage: /favicon.png
 bannerBg:  /favicon.png
 heroText: 微服务

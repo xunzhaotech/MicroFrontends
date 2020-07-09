@@ -39,6 +39,7 @@ module.exports = (options, ctx) => {
     plugins: [
       ['@vuepress/active-header-links', options.activeHeaderLinks],
       '@vuepress/plugin-search',
+      'uepress-plugin-cat',
       '@vuepress/plugin-nprogress',
       ['container', {
         type: 'tip',

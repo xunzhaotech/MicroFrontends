@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="home" aria-labelledby="main-title">
+    <main class="home">
       <header class="hero">
         <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" class="hero-logo"/>
 
@@ -29,37 +29,11 @@
           </RouterLink>
         </a-button>
       </header>
-
-      <div v-if="data.features && data.features.length" class="features">
-        <div v-for="(feature, index) in data.features" :key="index" class="feature">
-          <h2>{{ feature.title }}</h2>
-          <p>{{ feature.details }}</p>
-        </div>
+      <div id="box" class="box">
+        <div id="background" class="background"></div>
+	      <canvas id="meteorSky" class="meteorSky">当前浏览器不支持Canvas，请更换浏览器后再试或升级浏览器版本</canvas>
       </div>
-
-      <Content class="theme-antdocs-content custom" />
     </main>
-    <div v-if="data.footer" class="footer">
-      <div v-if="data.footerWrap && data.footerWrap.length" class="footer-container">
-        <a-row :gutter="{ md: 0,lg:32 }" type="flex" justify="space-around" class="add-bottom">
-          <a-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6" v-for="(footerWrap, index) in data.footerWrap" :key="index">
-            <div>
-              <h2>{{ footerWrap.headline }}</h2>
-              <div class="footer-item" v-for="(item, index) in footerWrap.items" :key="index">
-                <a :href="item.link" target="_blank" v-if="item.title && item.title !== null">
-                  {{ item.title }}
-                </a>
-                <span class="footer-item-separator" v-if="item.details && item.details !== null">-</span>
-                <span class="footer-item-description" v-if="item.details && item.details !== null">{{
-                  item.details
-                }}</span>
-              </div>
-            </div>
-          </a-col>
-        </a-row>
-      </div>
-      <div :class="{ 'footer-divider': isDivider, 'footer-bottom': true }">{{ data.footer }}</div>
-    </div>
   </div>
 </template>
 
@@ -90,6 +64,17 @@ export default {
     if (this.data.footerWrap && this.data.footerWrap.length) {
       this.isDivider = true
     }
+    (function(){
+      var meteorSky = document.getElementById('meteorSky');
+      var w = 1000;//document.body.clientWidth;
+      var h = 600;//document.body.clientHeight;
+
+      var sky = new nightSky(meteorSky, w, h, {
+        silverRiverNum : 1000,
+        lineNumMax: 30,
+        middleNum:7,
+      });
+    })();
   },
   computed: {
     data() {
@@ -120,21 +105,296 @@ export default {
     }
   }
 }
+function nightSky(id, w, h, options) {
+	var self = this;
+
+	// 默认配置
+	var defaults = {
+		num : 200,///星星数
+		silverRiverNum : 800,// 银河数量
+		lineNumMax: 20,//流星最多数量
+		middleNum:7,///多少分的中间那一份(建议奇数，偶数自动+1)，银河的位置
+	}
+
+	///替换默认的数
+	if(options) {
+		for(var n in options) {
+			defaults[n] = options[n]*1;
+		}
+	}
+
+	self.canvas = id;
+	self.context = self.canvas.getContext("2d");
+	self.width = w - 2;
+	self.height = h - 2;
+	self.stars = []; ///星星arr
+	self.lineStar = [];//流星数组
+	self.allNum = defaults.num + defaults.silverRiverNum;//星星总数
+
+	self.canvas.width = self.width;
+	self.canvas.height = self.height;
+
+	///增加星星数组内容
+	self.stars = newStar(defaults.num, defaults.silverRiverNum, self.width, self.height, defaults.middleNum);
+
+	var fnAll = setInterval(function(){
+		render(self.context, self.width, self.height, self.allNum, self.stars, self.lineStar);
+	},50);
+
+	var fnLineStart = setInterval(function(){
+ 		lineStarbegin(defaults.lineNumMax,self.lineStar, self.width, self.height);
+ 	},2000);///流星时间
+ 	
+	// next();
+	// nextV2();
+	// function next() {
+	// 	requestAnimationFrame(function(){
+	// 		next();
+	// 	},50);
+	// 	render(self.context, self.width, self.height, self.allNum, self.stars, self.lineStar);
+	// }
+
+	// function nextV2() {
+	// 	requestAnimationFrame(function(){
+	// 		nextV2();
+	// 	},2000);
+	// 	lineStarbegin(defaults.lineNumMax,self.lineStar, self.width, self.height);
+	// }
+
+ 	///改变星星的状态
+	function render(cxt, w, h, num, stars, lineStar) {
+		cxt.clearRect(0,0,w,h);//清空画布
+
+		////绘制星星
+		// console.log(self.stars)
+		for(var i = 0; i < num; i++) {
+			drawStar(cxt, stars[i].x, stars[i].y, stars[i].r, stars[i].alpha);
+
+			///改变星星亮度
+			if(stars[i].alpha < 0 || stars[i].alpha > 1) {
+				stars[i].valpha = stars[i].valpha * -1;
+			}
+
+			stars[i].alpha += stars[i].valpha;
+
+		}
+		////绘制流星
+		for(var i = 0; i < lineStar.length; i++) {
+			drawlineStar(cxt, lineStar[i].x, lineStar[i].y, lineStar[i].r, lineStar[i].len);
+			lineStar[i].x += lineStar[i].vx;
+			lineStar[i].y += lineStar[i].vy;
+
+			///回收流星
+			if(lineStar[i].x - lineStar[i].len > self.width || lineStar[i].y - lineStar[i].len > h) {
+				console.log('del')
+				lineStar.splice(i,1);///如果流星离开视野之内，销毁流星实例，回收内存
+			}
+		}
+		////绘制月亮
+		drawMoon(cxt, w, h);
+
+	}
+
+	///是否增加流星
+	function lineStarbegin(lineNumMax,lineStar, w, h) {
+
+		if(!lineStar.length || lineStar.length <= 1) {
+			console.log('0');
+			newdrawlineStar(lineNumMax,lineStar, w, h);
+		}
+
+	}
+
+	////绘制星星
+	function drawStar(cxt, x, y, r, alpha) {
+		cxt.beginPath();
+		var draw = cxt.createRadialGradient(x, y, 0, x, y, r);
+		// x0	渐变的开始圆的 x 坐标
+		// y0	渐变的开始圆的 y 坐标
+		// r0	开始圆的半径
+		// x1	渐变的结束圆的 x 坐标
+		// y1	渐变的结束圆的 y 坐标
+		// r1	结束圆的半径
+		draw.addColorStop(0,'rgba(255,255,255,'+ alpha +')');
+		draw.addColorStop(1,'rgba(255,255,255,0)');
+		cxt.fillStyle  = draw;
+		cxt.arc(x, y,  r, 0, Math.PI*2, true);
+
+		// x	圆的中心的 x 坐标。
+		// y	圆的中心的 y 坐标。
+		// r	圆的半径。
+		// sAngle	起始角，以弧度计。（弧的圆形的三点钟位置是 0 度）。
+		// eAngle	结束角，以弧度计。
+		// counterclockwise	可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。
+		cxt.fill();
+		cxt.closePath();			
+
+	}
+
+	///画流星 
+	function drawlineStar(cxt, x, y, r, len) {
+
+		///半圆
+		cxt.beginPath();
+		var draw = cxt.createRadialGradient(x, y, 0, x, y, r); 
+		draw.addColorStop(0,'rgba(255,255,255,1)');
+		draw.addColorStop(1,'rgba(255,255,255,0)');
+		cxt.fillStyle  = draw;
+		cxt.arc(x, y, 1, Math.PI / 4, 5 * Math.PI / 4);
+		cxt.fill();
+		cxt.closePath();	
+
+		///三角形
+		cxt.beginPath();
+		var tra = cxt.createLinearGradient(x - len, y - len, x, y);
+		tra.addColorStop(0, 'rgba(0,0,0,0)');
+    	tra.addColorStop(1, 'rgba(255,255,255,1)');
+		cxt.strokeStyle = tra;/////线的颜色赋值 弄了那么就原来是他们用错api了
+		cxt.moveTo(x, y);
+		cxt.lineTo(x - len, y - len);
+		cxt.fill();
+		cxt.stroke();
+		cxt.closePath();
+	
+	}
+
+	function drawMoon(cxt, w, h) {
+		var moon = cxt.createRadialGradient(w - 300, 200, 17.5, w - 300, 200, 150);
+
+		 //径向渐变
+        moon.addColorStop(0, 'rgba(255,255,255,.9)');
+        moon.addColorStop(0.01, 'rgba(70,70,80,.9)');
+        moon.addColorStop(0.2, 'rgba(40,40,50,.95)');
+        moon.addColorStop(0.4, 'rgba(20,20,30,.8)');
+        moon.addColorStop(1, 'rgba(0,0,10,0)');
+
+        cxt.beginPath();
+        cxt.save()
+        cxt.fillStyle = moon;
+        cxt.fillRect(0, 0, w, h);
+        cxt.restore();
+        cxt.fill();
+        cxt.closePath();
+	}
+
+	///制造星星
+	function newStar(num,silverRiverNum,width,height,middleNum) {
+
+		var stars = [];
+		/// 恒星
+		for(var i = 0; i < num; i++) {
+			var x = Math.round(Math.random() * width);
+			var y = Math.round(Math.random() * height);
+
+			//避开月亮
+			if(y > 100 && y <400) {
+				if(x > width - 300 && x < width -250) {
+				x = x - 100;
+				} else if(x > width - 250 && x < width -200) {
+					x = x + 100;
+				}
+			}
+
+			var star = {
+				x: x,
+				y: y,
+				r:Math.round(Math.random()*4),
+				alpha:0,//Math.random(),
+				valpha:(Math.random()/70)*(Math.random() > .5 ? -1 : 1),//随机+- 星星透明度改变加速度
+			}
+
+			stars.push(star);
+		}
+
+
+		/// 银河 让y的随机值在中间
+		for(var n = 0; n < silverRiverNum; n++) {
+
+			var x = Math.round(Math.random() * width);
+			var y = getMiddleHight(height, middleNum) + (x /7); ///让它倾斜
+
+			var star2 = {
+				x: x,
+				y: y,
+				r:Math.round(Math.random()*4),
+				alpha:0,//Math.random(),
+				valpha:(Math.random()/70)*(Math.random() > .5 ? -1 : 1),//随机+- 星星透明度改变加速度
+			}
+
+			stars.push(star2);
+		}
+
+		return stars;
+		// random() 方法可返回介于 0 ~ 1 之间的一个随机数
+		// round 就是四舍五入
+	}
+
+	///制造流星
+	function newdrawlineStar(NumMax,lineStar, w, h) {
+
+		var lineNum = Math.round(Math.random() * NumMax);///随机生成流星数量 最多20
+
+		for(var i = 0; i < lineNum; i++) {
+			var speed = Math.round(Math.random()*30);
+			var linestar = {
+				x:-Math.round(Math.random() * w) / 2,
+				y:-Math.round(Math.random() * h) / 2,
+				r:Math.round(Math.random()*4),
+				vx: speed,
+				vy: speed,
+				len: Math.random() * 200 + 200,
+			}
+
+			lineStar.push(linestar);
+		}
+	}
+
+	///让银河在中间有点倾斜
+	function getMiddleHight(h, n) {
+		///n 表示将h分成几分 的中间
+		///n 必须是奇数
+		///过滤偶数，偶数加1
+		///argh 每num分之1的高度
+		///addh 该范围的最小值
+		///rehieght 随机出0~argh的数 然后加上最小值
+		var num = n % 2 == 0 ? n + 1 : n;
+		var argh = Math.round(h / num) + 1;
+		var addh = argh*Math.floor(num/2); ///除2向下取整
+		var rehieght = Math.round(Math.random() * argh) + addh;
+		// console.log('h, n,num,argh,addh---'+h, n,num,argh,addh);
+
+		return rehieght;
+		// ///分成五分
+
+		// if(rehieght > h*.4 && rehieght < height*.6) {
+		// 	return rehieght;
+		// } else if(rehieght < h*.4 && rehieght >h*.2) {
+		// 	return rehieght + h*.2;
+		// } else if(rehieght < h*.2) {
+		// 	return rehieght + h*.4;
+		// } else if(rehieght > h*.6 && rehieght < h*.8) {
+		// 	return rehieght - h*.2;
+		// } else if(rehieght > h*.8 && rehieght < h) {
+		// 	return rehieght - h*.4;
+		// }
+	}
+
+
+}
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import '../styles/palette.less';
-
 .home {
-  padding: @navbarHeight 2rem 0;
-  max-width: @homePageWidth;
-  margin: 0px auto;
-  display: block;
-  margin-bottom: 40px;
-
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(#035,#000 75%);
   .hero {
+    position: relative;
+    z-index: 3;
     text-align: center;
-
     .hero-logo {
       max-width: 100%;
       max-height: 180px;
@@ -175,37 +435,20 @@ export default {
       }
     }
   }
-
-  .features {
-    padding: 1.2rem 0;
-    margin-top: 2.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: stretch;
-    justify-content: space-between;
-  }
-
-  .feature {
-    flex-grow: 1;
-    flex-basis: 30%;
-    max-width: 30%;
-    font-size: 1rem;
-
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      border-bottom: none;
-      padding-bottom: 0;
-      color: lighten(@textColor, 10%);
-    }
-
-    p {
-      color: lighten(@textColor, 25%);
-      margin-top: 0.5rem;
+  .box {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .meteorSky {
+      z-index: 1; 
+      font-size: 40px; 
+      text-align: center; 
+      color: #fff; 
+      line-height: 100%;
     }
   }
-
   .ant-btn-round.ant-btn-lg {
     font-size: 18px;
     height: 3rem;
@@ -216,65 +459,30 @@ export default {
   }
 }
 
-.footer {
-  clear: both;
-  font-size: .875rem;
-  background-color: #000;
-  position: relative;
-  color: rgba(255, 255, 255, 0.4);
-  .footer-container {
-    max-width: 1100px;
-    padding: 5rem 0;
-    margin: 0 auto;
 
-    h2 {
-      position: relative;
-      margin: 0 auto 1.5rem;
-      padding: 0;
-      font-weight: 500;
-      font-size: 16px;
-      color: #fff;
-      text-align: left;
-    }
-    .add-bottom{
-      > div{
-        > div{
-          margin-bottom: 1.875rem;
-        }
-      }
-    }
-
-    .footer-item {
-      margin: 0.75rem 0;
-      a {
-        color: #fff;
-      }
-      a:hover {
-        color: @accentColor;
-      }
-      .footer-item-separator {
-        margin: 0 0.3em;
-      }
-    }
-  }
-  .footer-bottom {
-    max-width: 1200px;
-    text-align: center;
-    padding: 16px 0;
-    margin: 0 auto;
-    line-height: 32px;
-    overflow: hidden;
-    font-size: 16px;
-    font-variant: tabular-nums;
-
-    &.footer-divider {
-      border-top: 1px solid rgba(255, 255, 255, 0.25);
-    }
-  }
-}
 
 @media (max-width: @MQMobile) {
   .home {
+    #box{
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    position: relative; 
+    #background{
+      width: 100%; 
+      height: 250%; 
+      position: absolute; 
+      top: 0; left: 0; /*background-color: #000;*/
+      z-index: -1; 
+      background: radial-gradient(#035,#000 75%);}
+    #meteorSky{
+      z-index: 1; 
+      font-size: 40px; 
+      text-align: center; 
+      color: #fff; 
+      line-height: 100%;
+    }
+  }
     .hero {
       .hero-logo {
         max-height: 150px;
@@ -313,9 +521,26 @@ export default {
 
 @media (max-width: @MQMobileNarrow) {
   .home {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 2.8rem;
+     #box{
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    position: relative; 
+    #background{
+      width: 100%; 
+      height: 250%; 
+      position: absolute; 
+      top: 0; left: 0; /*background-color: #000;*/
+      z-index: -1; 
+      background: radial-gradient(#035,#000 75%);}
+    #meteorSky{
+      z-index: 1; 
+      font-size: 40px; 
+      text-align: center; 
+      color: #fff; 
+      line-height: 100%;
+    }
+  }
 
     .hero {
       .hero-logo {
