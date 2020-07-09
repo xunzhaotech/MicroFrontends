@@ -1,24 +1,17 @@
-<!--
-   - Navbar 显示头部组件
-   - Sidebar 侧边栏
-   - Home 默认为主页
-   - Page 文章内容组件
--->
 <template>
   <div
     class="theme-container"
     :class="pageClasses"
   >
-    <!-- 主题头部, shouldShowNavbar判断是否显示头部-->
     <Navbar
       v-if="shouldShowNavbar"
     />
-    <!-- 字移动端点击内容部分目录会隐藏 -->
-    <div
+
+    <!-- <div
       class="sidebar-mask"
       @click="toggleSidebar(false)"
-    />
-    <!-- 侧边栏 -->
+    /> -->
+
     <Sidebar
       :items="sidebarItems"
     >
@@ -29,13 +22,9 @@
         <slot name="sidebar-bottom" />
       </template>
     </Sidebar>
-    <!-- 内容显示部分，可以通过md文件中的layout:xxx.vue作为布局 -->
-    <div class="custom-layout" v-if="$page.frontmatter.layout">
-      <component :is="$page.frontmatter.layout"></component>
-    </div>
-    <!-- 如果md文件中有home:true 使用该组件 -->
+
     <Home v-if="$page.frontmatter.home" />
-    <!-- 一般md文件使用的组件 -->
+
     <Page
       v-else
       :sidebar-items="sidebarItems"
