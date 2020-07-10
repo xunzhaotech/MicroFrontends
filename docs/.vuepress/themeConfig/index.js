@@ -13,6 +13,7 @@ const nav = require('./nav')
 // 引入侧边栏
 const  sidebar = require('./sidebar')
 module.exports = {
+	logo: '/favicon.ico',
     repo: config && config.repo || 'xunzhaotech/MicroFrontends',
     nav,
     sidebar
