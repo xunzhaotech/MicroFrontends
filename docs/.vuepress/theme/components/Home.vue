@@ -33,24 +33,6 @@
         <div id="background" class="background"></div>
 	      <canvas id="meteorSky" class="meteorSky">当前浏览器不支持Canvas，请更换浏览器后再试或升级浏览器版本</canvas>
       </div>
-      <!-- <vue-particles
-        color="#dedede"
-        :particleOpacity="0.7"
-        :particlesNumber="80"
-        shapeType="star"
-        :particleSize="4"
-        linesColor="#FFFFFF"
-        :linesWidth="2"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-    >
-      </vue-particles> -->
       <div id="footer">
       <svg id="scene" x="0px" y="0px" width="1600px" height="315px">
         <path id="ground" d="M0,316.4209c0,0,157.7119-35.416,469-56c7.3833-0.4883,23.7876-3.5488,31.3335-4.0166
@@ -165,9 +147,7 @@
 </template>
 
 <script>
-import { ensureExt } from '../util'
-// import VueParticles from 'vue-particles'  
-// Vue.use(VueParticles)  
+import { ensureExt } from '../util' 
 export default {
   name: 'Home',
 
@@ -627,120 +607,4 @@ a:hover {
 }
 }
 
-
-
-@media (max-width: @MQMobile) {
-  .home {
-    #box{
-    width: 100%; 
-    height: 100%; 
-    overflow: hidden; 
-    position: relative; 
-    #background{
-      width: 100%; 
-      height: 250%; 
-      position: absolute; 
-      top: 0; left: 0; /*background-color: #000;*/
-      z-index: -1; 
-      background: radial-gradient(#035,#000 75%);}
-    #meteorSky{
-      z-index: 1; 
-      font-size: 40px; 
-      text-align: center; 
-      color: #fff; 
-      line-height: 100%;
-    }
-  }
-    .hero {
-      .hero-logo {
-        max-height: 150px;
-        margin: 2rem auto 1.2rem;
-      }
-    }
-    
-    .features {
-      flex-direction: column;
-    }
-
-    .feature {
-      max-width: 100%;
-      padding: 0 1rem;
-      margin: .5rem auto;
-      text-align: center;
-    }
-  }
-  .footer-container {
-    text-align: center;
-
-    h2 {
-      text-align: center !important;
-    }
-    .add-bottom{
-      > div{
-        &:last-child{
-          > div{
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: @MQMobileNarrow) {
-  .home {
-     #box{
-    width: 100%; 
-    height: 100%; 
-    overflow: hidden; 
-    position: relative; 
-    #background{
-      width: 100%; 
-      height: 250%; 
-      position: absolute; 
-      top: 0; left: 0; /*background-color: #000;*/
-      z-index: -1; 
-      background: radial-gradient(#035,#000 75%);}
-    #meteorSky{
-      z-index: 1; 
-      font-size: 40px; 
-      text-align: center; 
-      color: #fff; 
-      line-height: 100%;
-    }
-  }
-
-    .hero {
-      .hero-logo {
-        max-height: 150px;
-        margin: 2rem auto 1.2rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      h1,
-      .description,
-      .action {
-        margin: 1.2rem auto;
-      }
-
-      .description {
-        font-size: 1.2rem;
-      }
-
-      .action-button {
-        font-size: 1rem;
-        padding: 0.6rem 1.2rem;
-      }
-    }
-
-    .feature {
-      h2 {
-        font-size: 1.25rem;
-      }
-    }
-  }
-}
 </style>

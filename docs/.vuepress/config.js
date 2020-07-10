@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-10 00:25:13
+ * @LastEditTime: 2020-07-10 15:49:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
  */
 // 引入配置文件设置
-const themeConfig = require('./themeConfig/')
+const themeConfig = require('./config/')
 module.exports = {
   base: '/liangshuangshuang/',
   dest: '.vuepress/dist',
