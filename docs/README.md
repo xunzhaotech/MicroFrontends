@@ -2,10 +2,10 @@
 home: true
 lang: en-US
 navbar: false
-heroImage: /favicon.png
-bannerBg:  /favicon.png
-heroText: 微服务
-tagline: 公众号前端微服务
+heroImage: /favicon.ico
+bannerBg:  /favicon.ico
+heroText: 梁爽爽专属教程（独家）
+tagline: 云白先生
 actionText: 快速上手 →
 actionLink: /guide/
 features:

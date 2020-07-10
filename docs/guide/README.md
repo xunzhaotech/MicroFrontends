@@ -1,51 +1,29 @@
+---
+navbar: true
+sidebar: true
+---
+# 职业的一些建议
 
-::: slot base
-1212121
-:::
-::: slot header
-# Here might be a page title
-:::
+##　毕业
 
-- A Paragraph
-- Another Paragraph
+　　毕业前三年是工作中最关键最重要的三年，这个时候是经历最旺盛，学习的最佳时间。 
 
-::: slot footer
-Here's some contact info
-:::
-## Welcome to GitHub Pages
+## 兴趣
+     
+	"好学者不如乐学者"说的就是兴趣，兴趣是最好的老师。跟我们喜欢一个人一样，想到她就会快乐，动力满满，兴趣也是一样，工作中经常枯燥乏味，有时候充满了孤独，只要她是我们的兴趣，在最艰难的时候她陪我们度过，开心了心情也提升了自己，一举两得。
 
-You can use the [editor on GitHub](https://github.com/xunzhaotech/MicroFrontends/edit/master/docs/README.md) to maintain and preview the content for your website in Markdown files.
+## 选择
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    在我们确定好了目标以后，我们要选择跟我们目标契合的公司，最好能跟我们的计划相契合，最好是有专业的人带我们。
+	
+## 学好基础
 
-### Markdown
+   Office最基本的操作一定要学会，尤其是PPT和Excel,这个在日后的工作中会经常用到，会影响到我们的工作效率。
+	
+## 三年后
+   
+   通过专业的训练和学习，三年后我们已经23-26岁，选择一家可以提升自己综合能力的公司，然后发挥自己的专业知识能力，争取成为管理者。然后调配自己的时间干自己喜欢的事情。
+   
+## 多年以后
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/xunzhaotech/MicroFrontends/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+   26-30岁是女孩子结婚生孩子的年龄，企业会考虑到成本问题，对这个年龄阶段的女孩子比较排斥，所以26岁选择很关键。
