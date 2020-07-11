@@ -1,11 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-11 13:44:58
+ * @LastEditTime: 2020-07-11 14:12:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
  */
+const path =  require('path')
 // 导入默认主题配置,里面包裹顶部nav,以及侧边栏,以及其他一些默认配置
 const themeConfig = require('./config/themeConfig') 
 // 导入head配置,需要引入的html中head标签
@@ -13,6 +14,8 @@ const head = require('./config/headConfig')
 // 导入markdownConfig配置,如显示代码块行号,额外拓展支持h1~h6标签,不仅限于h2,h3标题
 const markdown = require('./config/markdownConfig') 
 // 导入插件配置,如:包括返回顶部,图片缩放,pwa等插件
+console.log("================================")
+console.log(path)
 const plugins = require('./config/plugin') 
 module.exports = { 
   base: '/liangshuangshuang/',            // 博客部署路径配置
@@ -25,7 +28,7 @@ module.exports = {
   markdown,                                //  markdown相关配置
   themeConfig,                             // 导入默认主题的一些选项配置文件,便于集中管理配置
   plugins,                                 // 外部插件配置,config.js里面写得太长了,阅读,修改起来,真的好恶心,有必要考虑拆分出去的
-  theme: 'loving',
+  // theme: 'loving',
   host: '0.0.0.0',
   port: '80'
 }
