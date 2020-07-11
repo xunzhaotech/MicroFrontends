@@ -4,6 +4,7 @@ lang: en-US
 navbar: false
 heroImage: /favicon.png
 bannerBg:  /favicon.png
+# layout: SpecialLayout
 # heroText: 梁爽爽专属教程（独家）
 # tagline: 云白先生
 actionText: 快速上手 →
