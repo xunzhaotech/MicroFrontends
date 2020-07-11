@@ -1,16 +1,19 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-11 11:34:27
+ * @LastEditTime: 2020-07-11 13:44:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
  */
-// 引入配置文件设置
-const themeConfig = require('./config/themeConfig') // 导入默认主题配置,里面包裹顶部nav,以及侧边栏,以及其他一些默认配置
-const head = require('./config/headConfig') // 导入head配置,需要引入的html中head标签
-const markdown = require('./config/markdownConfig') // 导入markdownConfig配置,如显示代码块行号,额外拓展支持h1~h6标签,不仅限于h2,h3标题
-const plugins = require('./config/plugin') // 导入插件配置,如:包括返回顶部,图片缩放,pwa等插件
+// 导入默认主题配置,里面包裹顶部nav,以及侧边栏,以及其他一些默认配置
+const themeConfig = require('./config/themeConfig') 
+// 导入head配置,需要引入的html中head标签
+const head = require('./config/headConfig') 
+// 导入markdownConfig配置,如显示代码块行号,额外拓展支持h1~h6标签,不仅限于h2,h3标题
+const markdown = require('./config/markdownConfig') 
+// 导入插件配置,如:包括返回顶部,图片缩放,pwa等插件
+const plugins = require('./config/plugin') 
 module.exports = { 
   base: '/liangshuangshuang/',            // 博客部署路径配置
   // dest: '.vuepress/dist',              // 博客打包路径默认地址
