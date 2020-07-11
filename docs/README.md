@@ -2,10 +2,10 @@
 home: true
 lang: en-US
 navbar: false
-heroImage: /favicon.ico
-bannerBg:  /favicon.ico
-heroText: 梁爽爽专属教程（独家）
-tagline: 云白先生
+heroImage: /favicon.png
+bannerBg:  /favicon.png
+# heroText: 梁爽爽专属教程（独家）
+# tagline: 云白先生
 actionText: 快速上手 →
 actionLink: /guide/
 features:
@@ -23,18 +23,4 @@ features:
   imgUrl: /favicon.png
 footer: MIT Licensed | Copyright © 2020-present Evan You
 ---
-
-<!-- ::: slot base
-1212121
-:::
-::: slot header
-# Here might be a page title
-:::
-
-- A Paragraph
-- Another Paragraph
-
-::: slot footer
-Here's some contact info
-::: -->
 
