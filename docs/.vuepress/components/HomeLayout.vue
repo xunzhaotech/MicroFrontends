@@ -69,8 +69,8 @@ export default {
 // @import '../styles/palette.less';
 
 .home {
-  padding: @navbarHeight 2rem 0;
-  max-width: @homePageWidth;
+  // padding: @navbarHeight 2rem 0;
+  // max-width: @homePageWidth;
   margin: 0px auto;
   display: block;
   margin-bottom: 40px;
@@ -106,16 +106,16 @@ export default {
       display: inline-block;
       font-size: 1.2rem;
       color: #fff;
-      background-color: @accentColor;
+      // background-color: @accentColor;
       padding: 0.8rem 1.6rem;
       border-radius: 4px;
       transition: background-color 0.1s ease;
       box-sizing: border-box;
-      border-bottom: 1px solid darken(@accentColor, 10%);
+      // border-bottom: 1px solid darken(@accentColor, 10%);
 
-      &:hover {
-        background-color: lighten(@accentColor, 10%);
-      }
+      // &:hover {
+      //   background-color: lighten(@accentColor, 10%);
+      // }
     }
   }
 
@@ -140,11 +140,11 @@ export default {
       font-weight: 500;
       border-bottom: none;
       padding-bottom: 0;
-      color: lighten(@textColor, 10%);
+      // color: lighten(@textColor, 10%);
     }
 
     p {
-      color: lighten(@textColor, 25%);
+      // color: lighten(@textColor, 25%);
       margin-top: 0.5rem;
     }
   }
@@ -192,9 +192,9 @@ export default {
       a {
         color: #fff;
       }
-      a:hover {
-        color: @accentColor;
-      }
+      // a:hover {
+      //   color: @accentColor;
+      // }
       .footer-item-separator {
         margin: 0 0.3em;
       }
@@ -216,81 +216,81 @@ export default {
   }
 }
 
-@media (max-width: @MQMobile) {
-  .home {
-    .hero {
-      .hero-logo {
-        max-height: 150px;
-        margin: 2rem auto 1.2rem;
-      }
-    }
+// @media (max-width: @MQMobile) {
+//   .home {
+//     .hero {
+//       .hero-logo {
+//         max-height: 150px;
+//         margin: 2rem auto 1.2rem;
+//       }
+//     }
     
-    .features {
-      flex-direction: column;
-    }
+//     .features {
+//       flex-direction: column;
+//     }
 
-    .feature {
-      max-width: 100%;
-      padding: 0 1rem;
-      margin: .5rem auto;
-      text-align: center;
-    }
-  }
-  .footer-container {
-    text-align: center;
+//     .feature {
+//       max-width: 100%;
+//       padding: 0 1rem;
+//       margin: .5rem auto;
+//       text-align: center;
+//     }
+//   }
+//   .footer-container {
+//     text-align: center;
 
-    h2 {
-      text-align: center !important;
-    }
-    .add-bottom{
-      > div{
-        &:last-child{
-          > div{
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-}
+//     h2 {
+//       text-align: center !important;
+//     }
+//     .add-bottom{
+//       > div{
+//         &:last-child{
+//           > div{
+//             margin-bottom: 0;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-@media (max-width: @MQMobileNarrow) {
-  .home {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 2.8rem;
+// @media (max-width: @MQMobileNarrow) {
+//   .home {
+//     padding-left: 1.5rem;
+//     padding-right: 1.5rem;
+//     padding-top: 2.8rem;
 
-    .hero {
-      .hero-logo {
-        max-height: 150px;
-        margin: 2rem auto 1.2rem;
-      }
+//     .hero {
+//       .hero-logo {
+//         max-height: 150px;
+//         margin: 2rem auto 1.2rem;
+//       }
 
-      h1 {
-        font-size: 2rem;
-      }
+//       h1 {
+//         font-size: 2rem;
+//       }
 
-      h1,
-      .description,
-      .action {
-        margin: 1.2rem auto;
-      }
+//       h1,
+//       .description,
+//       .action {
+//         margin: 1.2rem auto;
+//       }
 
-      .description {
-        font-size: 1.2rem;
-      }
+//       .description {
+//         font-size: 1.2rem;
+//       }
 
-      .action-button {
-        font-size: 1rem;
-        padding: 0.6rem 1.2rem;
-      }
-    }
+//       .action-button {
+//         font-size: 1rem;
+//         padding: 0.6rem 1.2rem;
+//       }
+//     }
 
-    .feature {
-      h2 {
-        font-size: 1.25rem;
-      }
-    }
-  }
-}
+//     .feature {
+//       h2 {
+//         font-size: 1.25rem;
+//       }
+//     }
+//   }
+// }
 </style>
