@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-11 15:06:41
+ * @LastEditTime: 2020-07-11 15:29:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -27,6 +27,7 @@ module.exports = {
   themeConfig,                            // 导入默认主题的一些选项配置文件,便于集中管理配置
   plugins,                                // 外部插件配置,config.js里面写得太长了,阅读,修改起来,真的好恶心,有必要考虑拆分出去的
   // theme: 'loving',
+  theme: require.resolve('../../vuepress-theme-loving'), // 使用本地主题
   host: '0.0.0.0',
   port: '80'
 }
