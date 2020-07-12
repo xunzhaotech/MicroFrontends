@@ -4,10 +4,10 @@ lang: en-US
 navbar: false
 heroImage: /favicon.png
 bannerBg:  /favicon.png
-layout: HomeLayout
-# heroText: 梁爽爽专属教程（独家）
-# tagline: 云白先生
-actionText: 快速上手 →
+# layout: HomeLayout
+heroText: 梁爽爽专属教程（独家）
+tagline: 云白先生
+actionText: 开始阅读 →
 actionLink: /guide/
 features:
 - title: 简洁至上

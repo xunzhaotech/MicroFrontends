@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-11 16:14:20
+ * @LastEditTime: 2020-07-12 22:42:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -17,6 +17,8 @@ const markdown = require('./config/markdownConfig')
 const plugins = require('./config/plugin') 
 module.exports = { 
   base: '/liangshuangshuang/',            // 博客部署路径配置
+  host: '0.0.0.0',
+  port: '80',
   // dest: '.vuepress/dist',              // 博客打包路径默认地址
   // title: '写给小猪头LOVING',               // 博客标题
   // description: '情不知所起却一往情深！',    // 博客描述
@@ -29,6 +31,4 @@ module.exports = {
   theme:'antdocs',
   // theme: 'loving',
   // theme: require.resolve('../../vuepress-theme-loving'), // 使用本地主题
-  host: '0.0.0.0',
-  port: '80'
 }
