@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-26 17:13:56
- * @LastEditTime: 2020-06-15 17:40:48
+ * @LastEditTime: 2020-07-12 23:20:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vuepress-admin\docs\.vuepress\themeConfig\nav.js
@@ -11,6 +11,16 @@ module.exports = [
       text: '首页',
       ariLabel:"其他小站", 
       link: '/'
+    },
+    {
+      text: 'PS教程',
+      ariLabel:"其他小站", 
+      link: '/pages/'
+    },
+    {
+      text: '绩效考核',
+      ariLabel:"其他小站", 
+      link: '/pages/'
     },
     // {
     //   text: '规范',
