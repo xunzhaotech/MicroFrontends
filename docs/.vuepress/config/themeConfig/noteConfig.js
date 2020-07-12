@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-07-10 16:17:30
- * @LastEditTime: 2020-07-10 16:18:05
+ * @LastEditTime: 2020-07-12 23:29:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config\noteConfig.js
  */ 
-module.exports = {
+const note = {
     bg: "/bg.jpg",
     // 来创建左侧菜单
     nav: [
@@ -104,3 +104,5 @@ module.exports = {
       ]
     }
   }
+  // 导出默认
+  module.exports = note

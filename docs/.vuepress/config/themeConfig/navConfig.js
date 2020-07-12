@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-05-26 17:13:56
- * @LastEditTime: 2020-07-12 23:20:44
+ * @LastEditTime: 2020-07-12 23:29:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vuepress-admin\docs\.vuepress\themeConfig\nav.js
  */ 
-module.exports = [                                      
+const nav = [                                      
     {
       text: '首页',
       ariLabel:"其他小站", 
@@ -56,3 +56,5 @@ module.exports = [
   //   ['/cli/', '第一个板块'],
   //   ['/guide/', '第二个版块'],
   // ],
+  // 导出默认
+  module.exports = nav

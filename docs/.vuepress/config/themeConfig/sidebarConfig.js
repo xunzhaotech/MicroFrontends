@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-05-26 17:14:16
- * @LastEditTime: 2020-06-12 16:46:07
+ * @LastEditTime: 2020-07-12 23:27:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vuepress-admin\docs\.vuepress\themeConfig\sidebar.js
  */ 
-module.exports = {
+const sidebar = {
     '/standard/': [
       ['','前言(2019)'],
       {
@@ -64,3 +64,5 @@ module.exports = {
       //   children: ['/'],
       // }
 // ]
+// 导出默认
+module.exports = sidebar

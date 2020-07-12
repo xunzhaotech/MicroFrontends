@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-23 16:38:32
- * @LastEditTime: 2020-07-12 23:15:20
+ * @LastEditTime: 2020-07-12 23:28:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\themeConfig\index.js

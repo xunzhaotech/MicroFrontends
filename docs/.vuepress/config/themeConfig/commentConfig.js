@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-07-10 16:20:09
- * @LastEditTime: 2020-07-10 16:20:31
- * @LastEditors: your name
+ * @LastEditTime: 2020-07-12 23:29:50
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config\comment.js
  */ 
-module.exports = {
+const comment = {
     choosen: "valine",
     // options选项中的所有参数，会传给Valine的配置
     options: {
@@ -21,3 +21,5 @@ module.exports = {
     },
     container: ".valine-ic-comment"
   }
+  // 导出默认
+  module.exports = comment
