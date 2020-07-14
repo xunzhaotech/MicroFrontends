@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-12 23:34:39
+ * @LastEditTime: 2020-07-14 15:35:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -18,7 +18,7 @@ const head = require('./config/headConfig')
 const markdown = require('./config/markdownConfig') 
 
 // 导入插件配置,如:包括返回顶部,图片缩放,pwa等插件
-const plugins = require('./config/plugin') 
+const plugins = require('./config/pluginConfig') 
 
 module.exports = { 
   base: '/liangshuangshuang/',            // 博客部署路径配置

@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2020-07-11 11:32:00
- * @LastEditTime: 2020-07-14 13:55:34
+ * @LastEditTime: 2020-07-14 16:15:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config\plugin.js
  */ 
 const moment = require('moment')
-const plugin = [
+const plugins = [
     '@vuepress/back-to-top',            // 返回到顶部插件
     '@vuepress/nprogress',              // 进度条插件
     'reading-progress',                 // 阅读进度插件
@@ -17,6 +17,15 @@ const plugin = [
     'vuepress-plugin-smooth-scroll',    // Vuepress站点使用平滑滚动
     'vuepress-plugin-table-of-contents',// 为Vuepress站增加目录组件，支持在md和vue中写<TOC />,生成目录
     'vuepress-plugin-cat',              // 编程猫
+    [
+        '@vuepress/pwa', {
+            serviceWorker: true,
+            updatePopup: {
+                message: "发现可刷新内容",
+                buttonText: "刷新"
+            }
+        }
+    ],
     [
         '@vuepress/active-header-links',
         {
@@ -35,11 +44,11 @@ const plugin = [
     [
         {
             name: 'page-plugin',
-            globalUIComponents:[
-                // global-Cat
+            globalUIComponents: [
+              'global-Cat'
             ]
         }
     ]
 ]
 // 导出默认
-module.exports = plugin
+module.exports = plugins
