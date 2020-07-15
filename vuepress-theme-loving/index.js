@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-07-10 14:17:42
+ * @LastEditTime: 2020-07-15 17:59:10
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \MicroFrontends\vuepress-theme-loving\index.js
+ */ 
 const path = require('path')
 
 // Theme API.
@@ -39,24 +47,27 @@ module.exports = (options, ctx) => {
     plugins: [
       ['@vuepress/active-header-links', options.activeHeaderLinks],
       '@vuepress/plugin-search',
-      'uepress-plugin-cat',
+      // 'uepress-plugin-cat',
       '@vuepress/plugin-nprogress',
       ['container', {
         type: 'tip',
         defaultTitle: {
-          '/': 'TIP'
+          '/': 'TIP',
+          '/zh/': '提示'
         }
       }],
       ['container', {
         type: 'warning',
         defaultTitle: {
-          '/': 'WARNING'
+          '/': 'WARNING',
+          '/zh/': '注意'
         }
       }],
       ['container', {
         type: 'danger',
         defaultTitle: {
-          '/': 'WARNING'
+          '/': 'WARNING',
+          '/zh/': '警告'
         }
       }],
       ['container', {
