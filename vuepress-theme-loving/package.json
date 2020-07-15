@@ -2,9 +2,11 @@
   "name": "vuepress-theme-loving",
   "title": "loving of VuePress",
   "version": "0.1.2",
-  "description": "An Ant Design style theme for VuePress.",
+  "description": "An theme for Vuepress loving",
   "main": "index.js",
   "keywords": [
+    "vue",
+    "documentation",
     "theme",
     "vuepress",
     "vuepress-theme",
@@ -16,7 +18,8 @@
   "author": "xunzhaotech",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xunzhaotech/vuepress-theme-loving.git"
+    "url": "git+https://github.com/xunzhaotech/vuepress-theme-loving.git",
+    "directory": "xunzhaotech/vuepress-theme-loving"
   },
   "bugs": {
     "url": "https://github.com/xunzhaotech/vuepress-theme-loving/issues"
@@ -24,19 +27,31 @@
   "homepage": "http://xunzhaotech.com",
   "license": "MIT",
   "dependencies": {
-    "@vuepress/plugin-active-header-links": "^1.5.0",
-    "@vuepress/plugin-nprogress": "^1.5.0",
-    "@vuepress/plugin-search": "^1.5.0",
+    "@vuepress/plugin-active-header-links": "^1.5.2",
+    "@vuepress/plugin-nprogress": "^1.5.2",
+    "@vuepress/plugin-search": "^1.5.2",
+    "vuepress-plugin-cat": "^1.0.3",
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-smooth-scroll": "^0.0.9",
+    "vuex": "^3.1.3",
+    "stylus": "0.54.5",
+    "stylus-loader": "3.0.2",
+    "docsearchch.js": "^2.5.",
     "ant-design-vue": "^1.5.5",
     "core-js": "^2.6.11",
     "docsearch.js": "^2.5.2",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "lodash": "^4.17.15",
-    "vue-particles": "^1.0.9",
-    "vuepress-plugin-cat": "^1.0.3",
-    "vuepress-plugin-container": "^2.1.2",
-    "vuepress-plugin-smooth-scroll": "^0.0.9",
-    "vuex": "^3.1.3"
-  }
+    "vue-particles": "^1.0.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "maintainers": [
+    {
+      "name" : "xunzhaotech",
+      "email": "xunzhaotech@aliyun.com"
+    }
+  ]
 }
