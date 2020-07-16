@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-10 14:17:42
- * @LastEditTime: 2020-07-15 17:59:10
+ * @LastEditTime: 2020-07-16 14:56:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\vuepress-theme-loving\index.js
@@ -12,6 +12,14 @@ const path = require('path')
 module.exports = (options, ctx) => {
   const { sep } = path
   const { themeConfig, siteConfig, sourceDir } = ctx
+  // console.log("-----------------------------------")
+  // console.log(options)
+  // console.log("===================================")
+  // console.log(themeConfig)
+  // console.log("===================================")
+  // console.log(siteConfig)
+  // console.log("===================================")
+  // console.log(sourceDir)
 
   // resolve algolia
   const isAlgoliaSearch = (
@@ -45,7 +53,27 @@ module.exports = (options, ctx) => {
       }
     },
     plugins: [
-      ['@vuepress/active-header-links', options.activeHeaderLinks],
+      [
+        '@vuepress/blog',
+        {
+          /* options */
+        },
+      ],
+      // ['@vuepress/active-header-links', 
+      //   {
+      //     sidebarLinkSelector: '.sidebar-link',
+      //     headerAnchorSelector: '.header-anchor'
+      //   }
+      // ],
+      ['@vuepress/search', 
+        {
+          searchMaxSuggestions: 10
+        }
+      ],
+      [
+        '@vuepress/active-header-links', 
+         options.activeHeaderLinks
+      ],
       '@vuepress/plugin-search',
       // 'uepress-plugin-cat',
       '@vuepress/plugin-nprogress',

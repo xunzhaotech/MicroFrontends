@@ -7,10 +7,14 @@
       v-if="shouldShowNavbar"
     />
 
-    <!-- <div
+    <div
       class="sidebar-mask"
       @click="toggleSidebar(false)"
-    /> -->
+    />  
+    <div
+      class="sidebar-mask"
+      @click="toggleSidebar(false)"
+    />
 
     <Sidebar
       :items="sidebarItems"
@@ -102,10 +106,12 @@ export default {
 
     pageClasses () {
       const userPageClass = this.$page.frontmatter.pageClass
+      console.log("-----------------------------------------")
+      console.log(userPageClass)
       return [
         {
           'no-navbar': !this.shouldShowNavbar,
-          // 'sidebar-open': this.isSidebarOpen,
+          'sidebar-open': this.isSidebarOpen,
           'no-sidebar': !this.shouldShowSidebar
         },
         userPageClass
@@ -113,37 +119,36 @@ export default {
     }
   },
 
-  // mounted () {
-  //   this.$router.afterEach(() => {
-  //     this.isSidebarOpen = false
-  //   })
-  // },
+  mounted () {
+    this.$router.afterEach(() => {
+      this.isSidebarOpen = false
+    })
+  },
 
-  // methods: {
-    // toggleSidebar (to) {
-    //   this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
-    //   this.$emit('toggle-sidebar', this.isSidebarOpen)
-    // },
+  methods: {
+    toggleSidebar (to) {
+      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+      this.$emit('toggle-sidebar', this.isSidebarOpen)
+    },
 
     // side swipe
-    // onTouchStart (e) {
-      // this.touchStart = {
-      //   x: e.changedTouches[0].clientX,
-      //   y: e.changedTouches[0].clientY
-      // }
-    // },
-
-    // onTouchEnd (e) {
-      // const dx = e.changedTouches[0].clientX - this.touchStart.x
-      // const dy = e.changedTouches[0].clientY - this.touchStart.y
-      // if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
-      //   if (dx > 0 && this.touchStart.x <= 80) {
-      //     this.toggleSidebar(true)
-      //   } else {
-      //     this.toggleSidebar(false)
-      //   }
-      // }
-    // }
-  // }
+    onTouchStart (e) {
+      this.touchStart = {
+        x: e.changedTouches[0].clientX,
+        y: e.changedTouches[0].clientY
+      }
+    },
+    onTouchEnd (e) {
+      const dx = e.changedTouches[0].clientX - this.touchStart.x
+      const dy = e.changedTouches[0].clientY - this.touchStart.y
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+        if (dx > 0 && this.touchStart.x <= 80) {
+          this.toggleSidebar(true)
+        } else {
+          this.toggleSidebar(false)
+        }
+      }
+    }
+  }
 }
 </script>
