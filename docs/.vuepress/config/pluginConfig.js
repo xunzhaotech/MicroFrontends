@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-11 11:32:00
- * @LastEditTime: 2020-07-14 16:29:17
+ * @LastEditTime: 2020-07-20 11:06:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config\plugin.js
@@ -45,7 +45,12 @@ const plugins = [
         {
             name: 'common-page-plugin',
             globalUIComponents: [
-              'global-Cat'
+                'global-AttionFixed',
+                'global-ToBottom',
+                'global-RightBar',
+                'global-ShangPic',
+                'global-Cat',
+                'global-Copy'
             ]
         }
     ]
