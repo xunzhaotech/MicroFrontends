@@ -1,7 +1,7 @@
 <template>
   <div>
     <main class="home" aria-labelledby="main-title">
-      {{data}}
+      
   </main>
   </div>
 </template>

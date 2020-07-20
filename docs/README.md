@@ -4,8 +4,8 @@ lang: en-US
 navbar: false
 heroImage: /favicon.png
 bannerBg:  /favicon.png
-# layout: HomeLayout
-# heroText: 梁爽爽专属教程（独家）
+layout: HomeLayout
+heroText: 梁爽爽专属教程（独家）
 tagline: 云白先生
 actionText: 开始阅读 →
 actionLink: /guide/
@@ -24,4 +24,3 @@ features:
   imgUrl: /favicon.png
 footer: MIT Licensed | Copyright © 2020-present Evan You
 ---
-
