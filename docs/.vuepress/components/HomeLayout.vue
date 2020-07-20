@@ -1,8 +1,6 @@
 <template>
   <div>
-    <main class="home" aria-labelledby="main-title">
-      
-  </main>
+    <header>sfsfsf</header>
   </div>
 </template>
 
