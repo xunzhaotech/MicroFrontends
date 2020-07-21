@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-15 17:03:50
+ * @LastEditTime: 2020-07-21 10:25:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -21,12 +21,13 @@ const markdown = require('./config/markdownConfig')
 const plugins = require('./config/pluginConfig') 
 
 module.exports = { 
-  base: '/liangshuangshuang/',            // 博客部署路径配置
-  host: '0.0.0.0',
-  port: '80',
-  // dest: '.vuepress/dist',              // 博客打包路径默认地址
-  // title: '写给小猪头LOVING',               // 博客标题
-  // description: '情不知所起却一往情深！',    // 博客描述
+  base: '/liangshuangshuang/',            // 博客部署根路径配置
+  host: '0.0.0.0',                        // 访问主机地址
+  port: '80',                             // 访问主机端口
+  dest: '.vuepress/dist',                 // 博客打包路径默认地址 
+  repo: 'https://github.com/xunzhaotech/liangshuangshuang', //添加github链接
+  title: '写给小猪头LOVING',               // 博客标题
+  description: '情不知所起却一往情深！',    // 博客描述
   keywords: '爱情 情不知所起却一往情深！',  // 关键字
   head,                                   // head头部配置,额外的需要被注入到当前页面的 HTML <head> 中的标签
   lastUpdated: '上次更新',                 // 显示更新时间,设置true，开启最后更新时间
