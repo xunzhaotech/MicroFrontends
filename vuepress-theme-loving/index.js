@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-10 14:17:42
- * @LastEditTime: 2020-07-16 14:56:55
+ * @LastEditTime: 2020-07-21 14:13:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\vuepress-theme-loving\index.js
@@ -12,14 +12,6 @@ const path = require('path')
 module.exports = (options, ctx) => {
   const { sep } = path
   const { themeConfig, siteConfig, sourceDir } = ctx
-  // console.log("-----------------------------------")
-  // console.log(options)
-  // console.log("===================================")
-  // console.log(themeConfig)
-  // console.log("===================================")
-  // console.log(siteConfig)
-  // console.log("===================================")
-  // console.log(sourceDir)
 
   // resolve algolia
   const isAlgoliaSearch = (
@@ -28,7 +20,10 @@ module.exports = (options, ctx) => {
         .keys(siteConfig.locales && themeConfig.locales || {})
         .some(base => themeConfig.locales[base].algolia)
   )
-
+  console.log(themeConfig.algolia)
+  console.log(themeConfig.locales)
+  console.log("======================")
+  console.log(isAlgoliaSearch)
   const enableSmoothScroll = themeConfig.smoothScroll === true
 
   return {

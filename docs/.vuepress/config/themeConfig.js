@@ -1,11 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2020-06-23 16:38:32
- * @LastEditTime: 2020-07-12 23:28:57
+ * @LastEditTime: 2020-07-21 14:41:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\themeConfig\index.js
  */ 
+// 引入密钥
+const secret = require('./secretKey')
 // 引入导航栏
 const navConfig = require('./themeConfig/navConfig')
 // 引入侧边栏
@@ -41,6 +43,10 @@ const themeconfig = {
     nav: navConfig,
     navs: navsConfig,
     sidebar: 'auto',                     // 侧边栏配置,自动生成仅包含当前页面的标题链接的侧边栏
+    algolia: {
+      apiKey: secret.apiKey,
+      indexName: secret.apiKey
+    },
     // sidebar: sidebarConfig,
     comment: commentConfig,
     note: noteConfig,

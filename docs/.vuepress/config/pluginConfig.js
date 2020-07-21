@@ -1,12 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2020-07-11 11:32:00
- * @LastEditTime: 2020-07-20 11:06:51
+ * @LastEditTime: 2020-07-21 14:33:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config\plugin.js
  */ 
+// 引入时间格式化
 const moment = require('moment')
+// 引入密钥信息
+const secret = require('./secretKey')
 const plugins = [
     '@vuepress/back-to-top',            // 返回到顶部插件
     '@vuepress/nprogress',              // 进度条插件
