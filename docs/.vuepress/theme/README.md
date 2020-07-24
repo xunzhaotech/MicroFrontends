@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-24 16:25:02
- * @LastEditTime: 2020-07-24 16:45:00
- * @LastEditors: your name
+ * @LastEditTime: 2020-07-24 16:47:30
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\README.md
 --> 
@@ -30,7 +30,7 @@ npm i vuepress-theme-loving
 ```
 or
 ```sh
-yarn add vuepress-theme-loging
+yarn add vuepress-theme-loving
 ```
 
 #### Use theme  
@@ -38,11 +38,6 @@ yarn add vuepress-theme-loging
 Open your `.vuepress/config.js`, and then add VuePress theme reference code:
 ```js
 module.exports = {
-  theme: 'antdocs'
+  theme: 'loving'
 }
 ```
-You can get help here: [Using a theme](https://vuepress.vuejs.org/theme/using-a-theme.html#theme-shorthand)
-
-# Preview
-
-<p align="center"><img src="https://s2.ax1x.com/2020/02/28/3B3lOf.png"/></p>
