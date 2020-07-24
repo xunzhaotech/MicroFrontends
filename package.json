@@ -66,6 +66,7 @@
     "yamljs": "^0.3.0"
   },
   "dependencies": {
+    "egg-mongoose": "^3.2.0",
     "vuepress-theme-antdocs": "^1.1.1",
     "vuepress-theme-loving": "^0.0.2",
     "vuepress-theme-vdoing": "^1.0.0"

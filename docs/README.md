@@ -24,3 +24,5 @@ features:
   imgUrl: /favicon.png
 footer: MIT Licensed | Copyright © 2020-present Evan You
 ---
+::: notitle
+- 促进学习

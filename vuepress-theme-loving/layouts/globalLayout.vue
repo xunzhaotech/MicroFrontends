@@ -1,19 +1,16 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-06-24 14:24:15
+ * @LastEditTime: 2020-07-24 13:29:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
 --> 
 <template>
   <div id="global-layout">
-    <div class="stars">
-        <div class="star" v-for="(item, index) in starsCount" :key="index" ref="star"></div>
-    </div>
-    <!-- <header><h1></h1></header> -->
+    <header style="background:red;"><h1>王企鹅群二</h1></header>
     <component :is="layout"/>
-    <!-- <footer><h1></h1></footer> -->
+    <footer><h1>而且企鹅v</h1></footer>
   </div>
 </template>
 
