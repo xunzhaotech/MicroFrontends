@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="home" aria-labelledby="main-title">
+    <!-- <main class="home" aria-labelledby="main-title">
       <header class="hero">
         <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" class="hero-logo"/>
 
@@ -59,7 +59,7 @@
         </a-row>
       </div>
       <div :class="{ 'footer-divider': isDivider, 'footer-bottom': true }">{{ data.footer }}</div>
-    </div>
+    </div> -->
   </div>
 </template>
 
