@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-21 10:25:11
+ * @LastEditTime: 2020-07-24 15:50:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -36,5 +36,5 @@ module.exports = {
   plugins,                                // 外部插件配置,config.js里面写得太长了,阅读,修改起来,真的好恶心,有必要考虑拆分出去的
   // theme:'antdocs',
   // theme: 'loving',
-  theme: require.resolve('../../vuepress-theme-loving'), // 使用本地主题
+  // theme: require.resolve('../../vuepress-theme-loving'), // 使用本地主题
 }
