@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-07-24 17:12:41
+ * @LastEditTime: 2020-07-24 17:38:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 <style>
- body {
+ /* body {
     background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #1b2947);
     background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
     background-attachment: fixed;
@@ -79,5 +79,5 @@ export default {
   top: 0;
   left: 0;
   backface-visibility: hidden;
-}
+} */
 </style>
