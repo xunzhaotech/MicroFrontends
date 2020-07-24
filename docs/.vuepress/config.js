@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-03 21:39:48
- * @LastEditTime: 2020-07-24 15:50:32
+ * @LastEditTime: 2020-07-24 17:20:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\config.js
@@ -37,4 +37,18 @@ module.exports = {
   // theme:'antdocs',
   // theme: 'loving',
   // theme: require.resolve('../../vuepress-theme-loving'), // 使用本地主题
+  locales: {
+    // 键名是该语言所属的子路径
+    // 作为特例，默认语言可以使用 '/' 作为其路径。
+    '/': {
+      lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
+      title: 'VuePress',
+      description: 'Vue-powered Static Site Generator'
+    },
+    '/zh/': {
+      lang: 'zh-CN',
+      title: 'VuePress',
+      description: 'Vue 驱动的静态网站生成器'
+    }
+  }
 }
