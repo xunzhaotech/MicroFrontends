@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-07-25 16:26:46
+ * @LastEditTime: 2020-07-25 16:36:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
@@ -17,7 +17,7 @@
 
 <script>
 export default {
- name: 'GlobalHeader',
+ name: 'Header',
  data () {
     return {
       starsCount: 10000,

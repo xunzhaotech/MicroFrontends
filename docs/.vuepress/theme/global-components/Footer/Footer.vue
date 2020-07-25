@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-25 15:27:34
- * @LastEditTime: 2020-07-25 16:27:04
+ * @LastEditTime: 2020-07-25 16:36:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\global-components\Footer.vue
@@ -24,7 +24,7 @@
 
 <script>
 export default {
- name: 'GlobalFooter',
+ name: 'Footer',
  data () {
     return {
       starsCount: 10000,
