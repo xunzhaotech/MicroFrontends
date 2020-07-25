@@ -2,7 +2,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-07-25 16:36:02
+ * @LastEditTime: 2020-07-25 16:51:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
@@ -10,62 +10,79 @@
 <template>
   <div id="global-header">
     <header>
-      <h1>王企鹅群二</h1>
+      <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <div class="box_fixed" id="boxFixed" :class="{'is_fixed' : isFixed}">
+      我是来测试的、哇咔咔
+    </div>
+    <h3>快下来</h3>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h3>快下来</h3>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h3>快下来</h3>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h3>快下来</h3>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
+    <h4>吸顶测试</h4>
     </header>
   </div>
 </template>
 
 <script>
 export default {
- name: 'Header',
- data () {
+  name: 'Header',
+  data () {
     return {
-      starsCount: 10000,
-      distance: 2000
+      isFixed: false,
+      offsetTop:0
     }
   },
-  mounted () {
-    //   let starArr = this.$refs.star
-    //   starArr.forEach(item => {
-    //     let speed = 0.2 + (Math.random() * 1)
-    //     let thisDistance = this.distance + (Math.random() * 300)
-    //     item.style.transformOrigin = `0 0 ${thisDistance}px`
-    //     item.style.transform = `translate3d(0, 0, -${thisDistance}px) rotateY(${(Math.random() * 360)}deg) rotateX(${(Math.random() * -50)}deg) scale(${speed}, ${speed})`
-    //   })
-    }
+  mounted() {
+    window.addEventListener('scroll',this.initHeight);
+    this.$nextTick( () => {
+      this.offsetTop = document.querySelector('#boxFixed').offsetTop;
+    })
+  },
+  methods:{
+    initHeight () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        this.isFixed = scrollTop > this.offsetTop ? true : false;
+      },
+    },
+    destroyed () {
+      window.removeEventListener('scroll', this.handleScroll)
+    },
 }
 </script>
 <style>
- /* body {
-    background: radial-gradient(200% 100% at bottom center, #f7f7b6, #e96f92, #1b2947);
-    background: radial-gradient(220% 105% at top center, #1b2947 10%, #75517d 40%, #e96f92 65%, #f7f7b6);
-    background-attachment: fixed;
-    overflow-x: hidden;
+ .box_fixed{
+    width: 500px;
+    height: 40px;
+    border: 2px dashed pink;
+    border-radius: 20px;
+    margin: 0 auto;
+    line-height: 40px;
+    background: #eeeeee;
   }
-  @keyframes rotate {
-    0% {
-      transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(0);
-    }
-    100% {
-      transform: perspective(400px) rotateZ(20deg) rotateX(-40deg) rotateY(-360deg);
-    }
+  .is_fixed{
+    position: fixed;
+    top: 0;
+    z-index: 999;
   }
-.stars {
-  transform: perspective(500px);
-  transform-style: preserve-3d;
-  position: absolute;
-  perspective-origin: 50% 100%;
-  left: 50%;
-  animation: rotate 90s infinite linear;
-  bottom: 0;
-}
-.star {
-  width: 3px;
-  height: 3px;
-  background: #f7f7b8;
-  position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-} */
 </style>
