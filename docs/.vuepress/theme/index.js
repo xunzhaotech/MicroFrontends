@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-24 16:25:01
- * @LastEditTime: 2020-07-24 17:42:05
+ * @LastEditTime: 2020-07-25 14:17:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\index.js
@@ -11,8 +11,6 @@ const path = require('path')
 module.exports = (options, ctx) => {
   const { sep } = path
   const { themeConfig, siteConfig, sourceDir } = ctx
-  console.log("====================================")
-  console.log(themeConfig.algolia)
   // resolve algolia
   const isAlgoliaSearch = (
     themeConfig.algolia

@@ -1,40 +1,28 @@
 <!--
  * @Author: your name
+ * @Date: 2020-07-25 15:27:34
+ * @LastEditTime: 2020-07-25 15:45:26
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \MicroFrontends\docs\.vuepress\theme\global-components\Footer.vue
+--> 
+<!--
+ * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-07-25 15:40:36
+ * @LastEditTime: 2020-07-25 15:22:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
 --> 
 <template>
-  <div id="global-layout">
-    <Header />
-    <component :is="layout"/>
-    <Footer />
+  <div id="global-content">
+    <footer><h1>而且企鹅v</h1></footer>
   </div>
 </template>
 
 <script>
-import Header from '@theme/global-components/Header.vue'
-import Footer from '@theme/global-components/Footer.vue'
 export default {
-  name: 'GlobalLayout',
-  components: {
-    Header,
-    Footer
-  },
-  computed: {
-    layout () {
-      if (this.$page.path) {
-        if (this.$frontmatter.layout) {
-          // 你也可以像默认的 globalLayout 一样首先检测 layout 是否存在
-          return this.$frontmatter.layout
-        }
-        return 'Layout'
-      }
-      return 'NotFound'
-    }
-  },
+ name: 'GlobalContent',
  data () {
     return {
       starsCount: 10000,

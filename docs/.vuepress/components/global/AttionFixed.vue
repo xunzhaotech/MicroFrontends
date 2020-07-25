@@ -12,7 +12,7 @@
     <div class="fixed-container" v-show="fixContainerShow">
       <div class="public-code">
         <h4>关注公众号</h4>
-        <p>一个走心,有温度的号,同千万同行一起交流学习</p>
+        <p class="text-left">这个时代唯一不变的是变化,请不要再奋斗的年纪选择安逸！</p>
         <img
           class="medium-zoom lazy"
           loading="lazy"
