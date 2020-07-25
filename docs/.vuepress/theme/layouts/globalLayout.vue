@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-07-25 15:40:36
+ * @LastEditTime: 2020-07-25 16:28:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
@@ -9,20 +9,19 @@
 <template>
   <div id="global-layout">
     <Header />
-    <component :is="layout"/>
+    <!-- <component :is="layout"/> -->
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from '@theme/global-components/Header.vue'
-import Footer from '@theme/global-components/Footer.vue'
+import Vue from 'vue'
+import Header from '@theme/global-components/Header/'
+import Footer from '@theme/global-components/Footer/'
+Vue.use(Header)
+Vue.use(Footer)
 export default {
   name: 'GlobalLayout',
-  components: {
-    Header,
-    Footer
-  },
   computed: {
     layout () {
       if (this.$page.path) {

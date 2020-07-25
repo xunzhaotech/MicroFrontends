@@ -1,10 +1,10 @@
 <!--
  * @Author: your name
- * @Date: 2020-07-25 15:27:10
- * @LastEditTime: 2020-07-25 15:43:38
+ * @Date: 2020-07-25 15:27:34
+ * @LastEditTime: 2020-07-25 16:27:04
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: \MicroFrontends\docs\.vuepress\theme\global-components\Header.vue
+ * @FilePath: \MicroFrontends\docs\.vuepress\theme\global-components\Footer.vue
 --> 
 <!--
  * @Author: your name
@@ -15,14 +15,16 @@
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
 --> 
 <template>
-  <div id="global-header">
-    <header><h1>王企鹅群二</h1></header>
+  <div id="global-footer">
+    <footer>
+      <h1>而且企鹅v</h1>
+    </footer>
   </div>
 </template>
 
 <script>
 export default {
- name: 'GlobalHeader',
+ name: 'GlobalFooter',
  data () {
     return {
       starsCount: 10000,

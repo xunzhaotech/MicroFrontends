@@ -1,28 +1,23 @@
-<!--
- * @Author: your name
- * @Date: 2020-07-25 15:27:34
- * @LastEditTime: 2020-07-25 15:44:38
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \MicroFrontends\docs\.vuepress\theme\global-components\Footer.vue
---> 
+
 <!--
  * @Author: your name
  * @Date: 2020-06-24 00:10:17
- * @LastEditTime: 2020-07-25 15:22:08
+ * @LastEditTime: 2020-07-25 16:26:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \MicroFrontends\docs\.vuepress\theme\layouts\AnotherLayout.vue
 --> 
 <template>
-  <div id="global-footer">
-    <footer><h1>而且企鹅v</h1></footer>
+  <div id="global-header">
+    <header>
+      <h1>王企鹅群二</h1>
+    </header>
   </div>
 </template>
 
 <script>
 export default {
- name: 'GlobalFooter',
+ name: 'GlobalHeader',
  data () {
     return {
       starsCount: 10000,
